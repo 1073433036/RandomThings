@@ -1,0 +1,85 @@
+package usaco;
+/*
+ID:  justkim
+LANG: JAVA
+TASK: cowdance
+ */
+
+
+//package usaco;
+
+
+import java.io.*;          //put tester in file into usaco not bin/src the folder with bin/src in it
+import java.util.*;
+
+public class cowdance {
+	public static int check(int[] cowstimes,int maxtime,int space)
+	{
+		int time=0;
+		int[] area=new int[space];
+		int counter=0;
+		for(int i=0;i<cowstimes.length;i++)
+		{
+			for(int j=0;j<space;j++)
+			{
+				if(area[j]==0)
+				{
+					area[j]=cowstimes[counter];
+					counter++;
+				}
+			}
+			int[] temp=area;
+			Arrays.sort(temp);
+			for(int j=0;j<space;j++)
+			{
+				area[j]-=temp[0];
+			}
+			time+=temp[0];
+			if(time>maxtime)
+			{
+				time=maxtime*2;
+				break;
+			}
+		}
+		return time;
+	}
+	public static void main (String [] args) throws IOException {   
+		BufferedReader f = new BufferedReader(new FileReader("cowdance.in"));
+		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("cowdance.out")));
+		StringTokenizer st = new StringTokenizer(f.readLine());
+		int numcows = Integer.parseInt(st.nextToken());    
+		int maxtime = Integer.parseInt(st.nextToken());  
+		int max=0;
+		int maxpos=0;
+		int[] cowstimes=new int[numcows];
+		for(int i=0;i<numcows;i++)
+		{
+			st=new StringTokenizer(f.readLine());
+			cowstimes[i]=Integer.parseInt(st.nextToken());
+			if(cowstimes[i]>=max)
+			{
+				max=cowstimes[i];
+				maxpos=i;
+			}
+		}
+		int begin=0,end=numcows-1,mid=(begin+end)/2;
+		int minspace=0x3f3f3f3f;
+		while(begin<mid&&mid<end)
+		{
+			int a=check(cowstimes,maxtime,mid);
+			if(a<=maxtime)
+			{
+				minspace=mid;
+				end=mid;
+				mid=(begin+end)/2;
+			}
+			else
+			{
+				begin=mid;
+				mid=(begin+end)/2;
+			}
+		}
+		out.println(minspace);                      
+		out.close();                  
+	}
+}

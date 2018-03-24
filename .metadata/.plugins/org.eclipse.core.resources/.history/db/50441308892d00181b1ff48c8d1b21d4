@@ -1,0 +1,81 @@
+package usaco;
+
+import java.util.ArrayList;
+ import java.util.StringTokenizer;
+ import java.io.BufferedReader;
+ import java.io.PrintWriter;
+ import java.io.BufferedWriter;
+ import java.io.FileReader;
+ import java.io.FileWriter;
+
+import java.io.IOException;
+
+class walkie
+{
+	public int x;
+	public int y;
+	public int power;
+	public ArrayList<Integer> reachable;
+
+	public walkie(int x, int y, int power)
+	{
+		this.x = x;
+		this.y = y;
+		this.power = power;
+		reachable = new ArrayList<>();
+	}
+
+}
+
+public class moocast
+{
+	static walkie[] cows;
+	static boolean[] used;
+
+	public static void main(String[] args) throws IOException
+	{
+		BufferedReader f = new BufferedReader(new FileReader("moocast.in"));
+		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("moocast.out")));
+		StringTokenizer st = new StringTokenizer(f.readLine());
+		int numcows = Integer.parseInt(st.nextToken());
+		cows = new walkie[numcows];
+		used = new boolean[numcows];
+		for (int i = 0; i < numcows; i++)
+		{
+			st = new StringTokenizer(f.readLine());
+			cows[i] = new walkie(Integer.parseInt(st.nextToken()), Integer.parseInt(st.nextToken()),
+					Integer.parseInt(st.nextToken()));
+		}
+
+		for (int i = 0; i < numcows; i++)
+			for (int j = 0; j < numcows; j++)
+				if ((cows[i].x - cows[j].x) * (cows[i].x - cows[j].x)
+						+ (cows[i].y - cows[j].y) * (cows[i].y - cows[j].y) <= cows[i].power * cows[i].power)
+					cows[i].reachable.add(j);
+
+		int max = 0;
+		for (int i = 0; i < numcows; i++)
+		{
+			int temp = dfs(i);
+			if (temp > max)
+				max = temp;
+		}
+
+		out.println(max);
+		out.close();
+		f.close();
+	}
+
+	public static int dfs(int curr)
+	{
+		used[curr] = true;
+		int count = 1;
+		for (Integer cow : cows[curr].reachable)
+		{
+			if (!used[cow])
+				count += dfs(cow);
+		}
+		used[curr] = false;
+		return count;
+	}
+}

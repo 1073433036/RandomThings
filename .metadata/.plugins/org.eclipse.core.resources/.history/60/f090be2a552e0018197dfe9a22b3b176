@@ -1,0 +1,49 @@
+package usaco.NO;
+/*
+ID:  justkim
+LANG: JAVA
+TASK: cowcode
+ */
+
+
+//package usaco;
+
+
+import java.io.*;          //put tester in file into usaco not bin/src the folder with bin/src in it
+import java.util.*;
+
+public class cowcode {
+	public static void main (String [] args) throws IOException {   
+		BufferedReader f = new BufferedReader(new FileReader("cowcode.in"));
+		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("cowcode.out")));
+		StringTokenizer st = new StringTokenizer(f.readLine());
+		String s=st.nextToken();
+		long n = Integer.parseInt(st.nextToken());   
+		if(s.length()==0)
+		{
+			out.print("");
+			out.close();
+			return;
+		}
+		else if(s.length()==1)
+		{
+			out.print(s);
+			out.close();
+			return;
+		}
+		String pattern=s;
+		String temp=s.substring(s.length()-1, s.length())+s.substring(0,s.length()-1);
+		while(true)
+		{
+			pattern+=temp;
+			n-=temp.length();
+			if(n<=0)
+				break;
+			temp=pattern.substring(pattern.length()-1, pattern.length())+pattern.substring(0,pattern.length()-1);
+		}
+		int a=(int)-n;
+		out.println(temp.substring(a,a+1));                      
+		out.close();       
+		f.close();             
+	}
+}

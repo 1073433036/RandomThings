@@ -1,0 +1,41 @@
+
+package usaco;
+
+// import java.util.StringTokenizer;
+// import java.io.BufferedReader;
+// import java.io.PrintWriter;
+// import java.io.BufferedWriter;
+// import java.io.FileReader;
+// import java.io.FileWriter;
+
+import java.io.IOException;
+
+public class cowcode
+{
+	public static void main(String[] args) throws IOException
+	{
+		BufferedReader f = new BufferedReader(new FileReader("cowcode.in"));
+		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("cowcode.out")));
+		StringTokenizer st = new StringTokenizer(f.readLine());
+		String code = st.nextToken();
+		long n = Long.parseLong(st.nextToken());
+		int times = (int) Math.ceil(Math.log10(n * 1.0 / code.length()) / Math.log10(2));
+		String coded = code;
+		for (int i = 0; i < times; i++)
+			if (coded.length() > 10000000)
+			{
+				coded = rotate(coded);
+			}
+			else
+				coded = rotate(coded);
+
+		out.println(coded.substring((int) n - 1, (int) n));
+		out.close();
+		f.close();
+	}
+
+	public static String rotate(String code)
+	{
+		return code + code.substring(code.length() - 1) + code.substring(0, code.length() - 1);
+	}
+}

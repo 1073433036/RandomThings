@@ -1,0 +1,9 @@
+package usaco.NO;
+
+public class pageant
+{
+	public static void main(String[] args)
+	{
+		
+	}
+}

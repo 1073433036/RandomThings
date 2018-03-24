@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;j&apos; in &apos;FriendScore.highestScore(...)&apos; to &apos;i&apos;&#x0A;- Original project: &apos;APTs&apos;&#x0A;- Original element: &apos;FriendScore.highestScore(String[]).j&apos;&#x0A;- Renamed element: &apos;j&apos;&#x0A;- Update references to refactored element" description="Rename local variable &apos;j&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;{FriendScore.java[FriendScore~highestScore~\[QString;@j!228!236!232!232!I!0!false" name="i" references="true" stamp="1491083700754" version="1.0"/>
+</session>

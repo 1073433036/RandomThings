@@ -1,0 +1,39 @@
+/*
+ * ID: justkim
+ * LANG: JAVA
+ * TASK: cowrace
+ */
+
+// package usaco;
+import java.util.StringTokenizer;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+public class diamond
+{
+	public static void main(String[] args) throws IOException
+	{
+		BufferedReader f = new BufferedReader(new FileReader("diamond.in"));
+		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("diamond.out")));
+		StringTokenizer st = new StringTokenizer(f.readLine());
+
+		// StringTokenizer st = new StringTokenizer("");
+		// StringTokenizer f = new StringTokenizer("");
+		// StringTokenizer out = new StringTokenizer("");
+		
+		int n=Integer.parseInt(st.nextToken());
+		int k=Integer.parseInt(st.nextToken());
+		
+		int[][] diamonds=new int[n][2]
+
+		out.println(count);
+		out.close();
+		f.close();
+	}
+}

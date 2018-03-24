@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;MATHISNOTMETH.MatrixMultiplication.java&apos; to &apos;MatrixOperations.java&apos;&#x0A;- Original project: &apos;RANDOM&apos;&#x0A;- Original element: &apos;MATHISNOTMETH.MatrixMultiplication.java&apos;&#x0A;- Renamed element: &apos;MATHISNOTMETH.MatrixOperations.java&apos;" description="Rename compilation unit &apos;MatrixMultiplication.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;MATHISNOTMETH{MatrixMultiplication.java" name="MatrixOperations.java" references="false" stamp="1503456979503" version="1.0"/>
+</session>

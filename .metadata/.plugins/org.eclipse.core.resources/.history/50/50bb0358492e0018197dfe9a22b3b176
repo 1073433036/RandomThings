@@ -1,0 +1,57 @@
+package usaco;
+// import java.util.StringTokenizer;
+// import java.io.BufferedReader;
+// import java.io.PrintWriter;
+// import java.io.BufferedWriter;
+// import java.io.FileReader;
+// import java.io.FileWriter;
+
+import java.io.IOException;
+
+public class hps
+{
+	public static void main(String[] args) throws IOException
+	{
+		BufferedReader f = new BufferedReader(new FileReader("hps.in"));
+		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("hps.out")));
+		StringTokenizer st = new StringTokenizer(f.readLine());
+		int matches = Integer.parseInt(st.nextToken());
+		int[] predict = new int[matches];
+		for (int i = 0; i < matches; i++)
+		{
+			st = new StringTokenizer(f.readLine());
+			String picked = st.nextToken();
+			if (picked.equals("H"))
+				predict[i] = 1;
+			else if (picked.equals("P"))
+				predict[i] = 2;
+			else
+				predict[i] = 3;
+		}
+
+		int max = 0;
+		for (int choose = 1; choose < 4; choose++)
+			for (int i = 0; i < matches; i++)
+			{
+
+				int h = 0, p = 0, s = 0;
+				for (int j = i + 1; j < matches; j++)
+				{
+
+				}
+			}
+
+		out.println();
+		out.close();
+		f.close();
+	}
+
+	public boolean beat(int b, int j)
+	{
+		if (j == 1)
+			return b == 2;
+		if (j == 2)
+			return b == 3;
+		return b == 1;
+	}
+}
