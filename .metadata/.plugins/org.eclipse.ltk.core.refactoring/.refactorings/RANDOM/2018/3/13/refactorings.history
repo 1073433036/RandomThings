@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;maxcross.java&apos; to &apos;RANDOM/src/usacoFinished&apos;&#x0A;- Original project: &apos;RANDOM&apos;&#x0A;- Destination element: &apos;RANDOM/src/usacoFinished&apos;&#x0A;- Original element: &apos;usaco.maxcross.java&apos;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src&lt;usacoFinished" element1="/src&lt;usaco{maxcross.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1521939066301" units="1" version="1.0"/>
+</session>
