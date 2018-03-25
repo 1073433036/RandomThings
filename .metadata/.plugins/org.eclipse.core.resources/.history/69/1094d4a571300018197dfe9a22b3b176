@@ -1,0 +1,42 @@
+package usaco;
+
+import java.util.StringTokenizer;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+import java.io.IOException;
+
+public class multimoo
+{
+	public static int[][] map1;
+	public static int[][] map2;
+
+	public static void main(String[] args) throws IOException
+	{
+		BufferedReader f = new BufferedReader(new FileReader("multimoo.in"));
+		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("multimoo.out")));
+		StringTokenizer st = new StringTokenizer(f.readLine());
+		int size = Integer.parseInt(st.nextToken());
+		map1 = new int[size][size];
+		for (int i = 0; i < size; i++)
+		{
+			st = new StringTokenizer(f.readLine());
+			for (int j = 0; j < size; j++)
+				map1[i][j] = Integer.parseInt(st.nextToken());
+		}
+		map2=map1;
+		int max=0;
+		for(int i=0;i<size;i++)
+			for(int j=0;j<size;j++)
+			{
+				if(map1[i][j]!=-1)
+					ff1(i,j,)
+			}
+		out.println();
+		out.close();
+		f.close();
+	}
+}

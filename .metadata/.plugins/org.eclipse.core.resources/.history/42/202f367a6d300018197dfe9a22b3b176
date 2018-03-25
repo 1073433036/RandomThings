@@ -1,0 +1,39 @@
+package usaco;
+
+import java.util.Arrays;
+import java.util.StringTokenizer;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+import java.io.IOException;
+
+public class lemonade
+{
+	public static void main(String[] args) throws IOException
+	{
+		BufferedReader f = new BufferedReader(new FileReader("lemonade.in"));
+		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("lemonade.out")));
+		StringTokenizer st = new StringTokenizer(f.readLine());
+		int cows = Integer.parseInt(st.nextToken());
+		long[] cowswait = new long[cows];
+		st = new StringTokenizer(f.readLine());
+		for (int i = 0; i < cows; i++)
+			cowswait[i] = Long.parseLong(st.nextToken());
+
+		Arrays.sort(cowswait);
+		int count = 0;
+		for (int i = cows - 1; i >= 0; i--)
+		{
+			if (cowswait[i] >= count)
+				count++;
+			else
+				break;
+		}
+		out.println(count);
+		out.close();
+		f.close();
+	}
+}

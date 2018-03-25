@@ -1,0 +1,74 @@
+package usaco;
+
+import java.util.StringTokenizer;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+import java.io.IOException;
+
+class dpos
+{
+	public int num;
+	public int count;
+
+	public dpos(int num)
+	{
+		this.num = num;
+		count = 0;
+	}
+}
+
+public class multimoo
+{
+	public static int[][] map1;
+
+	public static void main(String[] args) throws IOException
+	{
+		BufferedReader f = new BufferedReader(new FileReader("multimoo.in"));
+		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("multimoo.out")));
+		StringTokenizer st = new StringTokenizer(f.readLine());
+		int size = Integer.parseInt(st.nextToken());
+		map1 = new int[size][size];
+		for (int i = 0; i < size; i++)
+		{
+			st = new StringTokenizer(f.readLine());
+			for (int j = 0; j < size; j++)
+				map1[i][j] = Integer.parseInt(st.nextToken());
+		}
+		int max = 0;
+		for (int i = 0; i < size; i++)
+			for (int j = 0; j < size; j++)
+			{
+				if (map1[i][j] != -1)
+					max = Math.max(max, ff1(i, j, map1[i][j]));
+				if (max * 2 >= size * size)
+					break;
+			}
+		out.println(max);
+
+		out.println();
+		out.close();
+		f.close();
+	}
+
+	public static int ff1(int x, int y, int id)
+	{
+		LinkedList<Integer>
+		map1[x][y] = -1;
+
+		int[] dx =
+			{ 0, 0, 1, -1 };
+		int[] dy =
+			{ 1, -1, 0, 0 };
+		int count = 0;
+		for (int i = 0; i < 4; i++)
+			if (x + dx[i] > -1 && x + dx[i] < map1.length && y + dy[i] > -1 && y + dy[i] < map1.length
+					&& map1[x + dx[i]][y + dy[i]] == id)
+				count += ff1(x + dx[i], y + dy[i], id);
+
+		return count;
+	}
+}
