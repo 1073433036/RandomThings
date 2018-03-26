@@ -1,6 +1,9 @@
 
 // package usaco;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.StringTokenizer;
 import java.io.BufferedReader;
 import java.io.PrintWriter;
@@ -19,13 +22,18 @@ public class sort
 		StringTokenizer st = new StringTokenizer(f.readLine());
 		int num = Integer.parseInt(st.nextToken());
 		int[] A = new int[num];
+		HashMap<Integer, Integer> C = new HashMap<>(num);
+		ArrayList<Integer> B = new ArrayList<>(num);
 		for (int i = 0; i < num; i++)
 		{
 			st = new StringTokenizer(f.readLine());
 			A[i] = Integer.parseInt(st.nextToken());
+			B.add(A[i]);
+			C.put(A[i], i);
 		}
 		int count = 0;
 		boolean sorted = false;
+		Collections.sort(B);
 		while (!sorted)
 		{
 			sorted = true;
@@ -33,9 +41,8 @@ public class sort
 			for (int i = 0; i < num - 1 - count; i++)
 				if (A[i] > A[i + 1])
 				{
-					int temp = A[i];
-					A[i] = A[i + 1];
-					A[i + 1] = temp;
+					int nextnumidx = C.get(B.get(idxOf(B, A[i]) + 1));
+					
 					sorted = false;
 				}
 			count++;
@@ -43,5 +50,21 @@ public class sort
 		out.println(count);
 		out.close();
 		f.close();
+	}
+
+	public static int idxOf(ArrayList<Integer> B, int val)
+	{
+		int min = 0, max = B.size() - 1;
+		while (min != max)
+		{
+			int mid = (min + max) / 2;
+			if (mid == val)
+				return val;
+			else if (mid < val)
+				min = mid + 1;
+			else
+				max = mid;
+		}
+		return min;
 	}
 }

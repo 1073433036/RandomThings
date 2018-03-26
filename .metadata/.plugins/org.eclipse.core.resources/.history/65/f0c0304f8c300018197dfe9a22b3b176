@@ -1,6 +1,9 @@
 
-// package usaco;
+package scam;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
 import java.util.StringTokenizer;
 import java.io.BufferedReader;
 import java.io.PrintWriter;

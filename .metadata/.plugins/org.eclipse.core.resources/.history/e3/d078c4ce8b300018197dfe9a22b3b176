@@ -1,6 +1,7 @@
 
 // package usaco;
 
+import java.util.Arrays;
 import java.util.StringTokenizer;
 import java.io.BufferedReader;
 import java.io.PrintWriter;
@@ -19,13 +20,16 @@ public class sort
 		StringTokenizer st = new StringTokenizer(f.readLine());
 		int num = Integer.parseInt(st.nextToken());
 		int[] A = new int[num];
+		int[] B = new int[num];
 		for (int i = 0; i < num; i++)
 		{
 			st = new StringTokenizer(f.readLine());
 			A[i] = Integer.parseInt(st.nextToken());
+			B[i] = A[i];
 		}
 		int count = 0;
 		boolean sorted = false;
+		Arrays.sort(B);
 		while (!sorted)
 		{
 			sorted = true;
