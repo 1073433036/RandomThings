@@ -6,12 +6,16 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="cows[j]" key="selection"/>
+		<item value="-1" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="-1"/>
+			<item value="col"/>
+			<item value="row"/>
+			<item value="&gt;="/>
 			<item value="cowb"/>
 			<item value="cowa"/>
 			<item value="open"/>
@@ -25,6 +29,9 @@
 			<item value=".nextToken()"/>
 		</list>
 		<list key="replacehistory">
+			<item value="y"/>
+			<item value="x"/>
+			<item value="&gt;"/>
 			<item value="cows[j]"/>
 			<item value="cows[i]"/>
 			<item value="maze"/>
@@ -42,7 +49,7 @@
 		<item value="290" key="DIALOG_WIDTH"/>
 		<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
 		<item value="409" key="DIALOG_HEIGHT"/>
-		<item value="760" key="DIALOG_X_ORIGIN"/>
-		<item value="35" key="DIALOG_Y_ORIGIN"/>
+		<item value="993" key="DIALOG_X_ORIGIN"/>
+		<item value="50" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>
