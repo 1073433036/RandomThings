@@ -4,7 +4,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.StringTokenizer;
-import java.util.TreeSet;
 import java.io.BufferedReader;
 import java.io.PrintWriter;
 import java.io.BufferedWriter;
@@ -22,16 +21,17 @@ public class sort
 		StringTokenizer st = new StringTokenizer(f.readLine());
 		int num = Integer.parseInt(st.nextToken());
 		int[] A = new int[num];
-		TreeSet<Integer> B = new TreeSet<>();
+		ArrayList<Integer> B = new ArrayList<>();
 		for (int i = 0; i < num; i++)
 		{
 			st = new StringTokenizer(f.readLine());
 			A[i] = Integer.parseInt(st.nextToken());
 			B.add(A[i]);
 		}
+		Collections.sort(B);
 
 		for (int i = 0; i < num; i++)
-			A[i] = B.
+			A[i] = B.indexOf(A[i]);
 		int max = 0;
 		for (int i = 0; i < num; i++)
 			max = Math.max(max, i - A[i]);
