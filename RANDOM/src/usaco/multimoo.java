@@ -1,74 +1,113 @@
 
-// package usaco;
+package usaco;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.util.StringTokenizer;
-import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.io.IOException;
+// import java.io.BufferedReader;
+// import java.io.BufferedWriter;
+// import java.io.FileReader;
+// import java.io.FileWriter;
+// import java.util.StringTokenizer;
+// import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedList;
+
+class pos
+{
+	int x;
+	int y;
+
+	public pos(int x, int y)
+	{
+		this.x = x;
+		this.y = y;
+	}
+}
 
 public class multimoo
 {
 	public static int[][] map;
-	public static ArrayList<Integer> switched = new ArrayList<>();
 	public static boolean[][] visited;
+	public static HashMap<Integer, ArrayList<Integer>> regionnexts = new HashMap<>();
 
 	public static void main(String[] args) throws IOException
 	{
 		BufferedReader f = new BufferedReader(new FileReader("multimoo.in"));
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("multimoo.out")));
 		StringTokenizer st = new StringTokenizer(f.readLine());
-		int size = Integer.parseInt(st.nextToken());
+		int size = Integer.parseInt(st.nextToken()); 
 		map = new int[size][size];
 		visited = new boolean[size][size];
+		HashMap<Integer, Integer> ids = new HashMap<>();
+		int count = 0;
 		for (int i = 0; i < size; i++)
 		{
 			st = new StringTokenizer(f.readLine());
 			for (int j = 0; j < size; j++)
-				map[i][j] = Integer.parseInt(st.nextToken());
+			{
+				int id = Integer.parseInt(st.nextToken());
+				if (ids.containsKey(id))
+					map[i][j] = ids.get(id);
+				else
+				{
+					ids.put(id, count);
+					map[i][j] = count;
+					count++;
+				}
+			}
 		}
 
 		int max = 0;
 		for (int i = 0; i < size; i++)
 			for (int j = 0; j < size; j++)
-				if (!visited[i][j])
-					max = Math.max(max, ff(i, j, map[i][j], map[i][j]));
+				if (!visited[i][j])//put new hashmap for new region
+					max = Math.max(max, ff(i, j));
 		out.println(max);
-		max = 0;
-		int[] dx =
-			{ 0, 0, 1, -1 };
-		int[] dy =
-			{ 1, -1, 0, 0 };
-		for (int i = 0; i < size; i++)
-			for (int j = 0; j < size; j++)
-				for (int k = 0; k < 4; k++)
-					if (i + dx[k] > -1 && i + dx[k] < size && j + dy[k] > -1 && j + dy[k] < size
-							&& map[i + dx[k]][j + dy[k]] != map[i][j])
-					{
-						visited = new boolean[size][size];
-						max = Math.max(max, ff(i, j, map[i][j], map[i + dx[k]][j + dy[k]]));
-					}
 
+		max = 0;
+		for (int i = 0; i < regionnexts.size(); i++)
+			max = Math.max(max, ff1(i, new boolean[regionnexts.size()]));
 		out.println(max);
 		out.close();
 		f.close();
 	}
 
-	public static int ff(int x, int y, int id)
+	public static int ff1(int region, boolean[] visited)
 	{
-		visited[x][y] = true;
-		int count = 1;
+		int max = 0;
+		visited[region] = true;
+		LinkedList<Integer> q = new LinkedList<>();
+		q.add(region);//loop through regions next to region
+		return max;
+
+	}
+
+	public static int ff(int x, int y)
+	{
 		int[] dx =
 			{ 0, 0, 1, -1 };
 		int[] dy =
 			{ 1, -1, 0, 0 };
-		for (int i = 0; i < 4; i++)
-			if (x + dx[i] > -1 && x + dx[i] < map.length && y + dy[i] > -1 && y + dy[i] < map.length)
-				if (!visited[x + dx[i]][y + dy[i]] && map[x + dx[i]][y + dy[i]] == id)
-					count += ff(x + dx[i], y + dy[i], id, id2);
+		LinkedList<pos> q = new LinkedList<>();
+		q.add(new pos(x, y));
+		visited[x][y] = true;
+		int id = map[x][y];
+		int count = 1;
+		while (!q.isEmpty())
+		{
+			pos curr = q.poll();
+			for (int i = 0; i < 4; i++)
+				if (curr.x + dx[i] > -1 && curr.x + dx[i] < map.length && curr.y + dy[i] > -1
+						&& curr.y + dy[i] < map.length && !visited[curr.x + dx[i]][curr.y + dy[i]])
+					if (map[curr.x + dx[i]][curr.y + dy[i]] == id)
+					{
+						q.add(new pos(curr.x + dx[i], curr.y + dy[i]));
+						count++;
+						visited[curr.x + dx[i]][curr.y + dy[i]] = true;
+					}
+					else
+						regionnexts.get(id).add(new pos(curr.x + dx[i], curr.y + dy[i]));
+		}
 		return count;
 	}
 }
