@@ -21557,7 +21557,6 @@ asquint
 asquirm
 asrama
 asramas
-ass
 assacu
 assafetida
 assafoetida
@@ -35165,17 +35164,6 @@ bitangential
 bitanhol
 bitartrate
 bitbrace
-bitch
-bitched
-bitchery
-bitcheries
-bitches
-bitchy
-bitchier
-bitchiest
-bitchily
-bitchiness
-bitching
 bite
 byte
 biteable
@@ -75045,8 +75033,6 @@ cunnings
 cunonia
 cunoniaceae
 cunoniaceous
-cunt
-cunts
 cunza
 cunzie
 cuon
@@ -84878,7 +84864,6 @@ dicynodon
 dicynodont
 dicynodontia
 dicynodontidae
-dick
 dickcissel
 dickey
 dickeybird
@@ -119739,12 +119724,6 @@ fuci
 fucinita
 fuciphagous
 fucivorous
-fuck
-fucked
-fucker
-fucking
-fucks
-fuckwit
 fucoid
 fucoidal
 fucoideae
@@ -135645,7 +135624,6 @@ helix
 helixes
 helixin
 helizitic
-hell
 helladian
 helladic
 helladotherium
@@ -193937,7 +193915,6 @@ motherdom
 mothered
 motherer
 motherers
-motherfucker
 mothergate
 motherhood
 motherhouse

@@ -13,12 +13,12 @@ public class makePassword
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println("This is a complex password generator.");
-		System.out.print("Do you want to (1) make an entirely new password, or (2)change your current one: ");
+		System.out.print("Do you want to (1) make an entirely new password, or (2)change your current one:");
 		String pass = "";
-		if (!repeatUntilGood(scan.next(), scan))
+		if (!repeatUntilGood(scan.next()))
 		{
 			System.out.println("To start, put your current or a random password and then press enter.");
-			pass = scan.next();
+			pass = scan.nextLine();
 			if (checkGood(pass))
 			{
 				System.out.print("Your password is good. Do you want a different one (Y/N): ");
@@ -39,18 +39,9 @@ public class makePassword
 		scan.close();
 	}
 
-	public static boolean repeatUntilGood(String input, Scanner scan)
+	public static boolean repeatUntilGood(String input)
 	{
-		while (true)
-		{
-			if (input.equals("1"))
-				break;
-			if (input.equals("2"))
-				break;
-			System.out.print("You need to input 1 or 2: ");
-			input = scan.next();
-		}
-		return input.equals("1");
+
 	}
 
 	public static String editPassword(String password)
@@ -88,7 +79,7 @@ public class makePassword
 			BufferedReader f = new BufferedReader(new FileReader("words.txt"));
 
 			Random rand = new Random();
-			int find = rand.nextInt(370076);
+			int find = rand.nextInt(370099);
 			for (int i = 0; i < find; i++)
 				f.readLine();
 

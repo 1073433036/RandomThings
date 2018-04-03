@@ -18,7 +18,7 @@ public class makePassword
 		if (!repeatUntilGood(scan.next(), scan))
 		{
 			System.out.println("To start, put your current or a random password and then press enter.");
-			pass = scan.next();
+			pass = scan.nextLine();
 			if (checkGood(pass))
 			{
 				System.out.print("Your password is good. Do you want a different one (Y/N): ");
@@ -41,12 +41,8 @@ public class makePassword
 
 	public static boolean repeatUntilGood(String input, Scanner scan)
 	{
-		while (true)
+		while (!input.equals("1") || !input.equals("2"))
 		{
-			if (input.equals("1"))
-				break;
-			if (input.equals("2"))
-				break;
 			System.out.print("You need to input 1 or 2: ");
 			input = scan.next();
 		}
@@ -88,7 +84,7 @@ public class makePassword
 			BufferedReader f = new BufferedReader(new FileReader("words.txt"));
 
 			Random rand = new Random();
-			int find = rand.nextInt(370076);
+			int find = rand.nextInt(370099);
 			for (int i = 0; i < find; i++)
 				f.readLine();
 

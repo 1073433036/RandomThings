@@ -104,7 +104,9 @@ public class multimoo
 					{
 						q.add(new pos(curr.x + dx[i], curr.y + dy[i]));
 						count++;
-						visited[curr.x + dx[i]][curr.y + dy[i]] = true;// regioncount+1
+						visited[curr.x + dx[i]][curr.y + dy[i]] = true;// +1 to
+																		// region
+																		// count
 					}
 					else
 						regionNexts.get(id).add(new pos(curr.x + dx[i], curr.y + dy[i]));
