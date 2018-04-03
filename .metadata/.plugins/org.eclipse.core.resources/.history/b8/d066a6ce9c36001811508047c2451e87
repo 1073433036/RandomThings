@@ -1,0 +1,14 @@
+package MATHISNOTMETH;
+
+import java.util.Scanner;
+
+public class makePassword
+{
+public static void main(String[] args)
+{
+	Scanner scan=new Scanner(System.in);
+	System.out.println("This is a password generator that converts words you type in into a decent password.");
+	
+	scan.close();
+}
+}

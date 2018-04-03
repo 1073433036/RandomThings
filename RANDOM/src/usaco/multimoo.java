@@ -57,7 +57,7 @@ public class multimoo
 		f.close();
 	}
 
-	public static int ff(int x, int y, int id, int id2)
+	public static int ff(int x, int y, int id)
 	{
 		visited[x][y] = true;
 		int count = 1;
@@ -67,8 +67,7 @@ public class multimoo
 			{ 1, -1, 0, 0 };
 		for (int i = 0; i < 4; i++)
 			if (x + dx[i] > -1 && x + dx[i] < map.length && y + dy[i] > -1 && y + dy[i] < map.length)
-				if (!visited[x + dx[i]][y + dy[i]]
-						&& (map[x + dx[i]][y + dy[i]] == id || map[x + dx[i]][y + dy[i]] == id2))
+				if (!visited[x + dx[i]][y + dy[i]] && map[x + dx[i]][y + dy[i]] == id)
 					count += ff(x + dx[i], y + dy[i], id, id2);
 		return count;
 	}
