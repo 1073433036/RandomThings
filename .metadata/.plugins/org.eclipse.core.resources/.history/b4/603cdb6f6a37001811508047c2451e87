@@ -91,10 +91,10 @@ public class makePassword
 	{
 		try
 		{
-			BufferedReader f = new BufferedReader(new FileReader("commonwords.txt"));
+			BufferedReader f = new BufferedReader(new FileReader("words.txt"));
 
 			Random rand = new Random();
-			int find = rand.nextInt(9897);
+			int find = rand.nextInt(370076);
 			for (int i = 0; i < find; i++)
 				f.readLine();
 
