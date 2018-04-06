@@ -1,0 +1,27 @@
+package MATHISNOTMETH;
+
+import java.util.Scanner;
+
+public class binaryGuess
+{
+	public static void main(String[] args)
+	{
+		Scanner scan = new Scanner(System.in);
+		int ans = scan.nextInt();
+		int min = 0;
+		int max = 1000;
+		while (min < max)
+		{
+			int mid = (min + max) / 2;
+			System.out.println(mid);
+			if (mid == ans)
+				break;
+			if (mid < ans)
+				min = mid;
+			else if (mid > ans)
+				max = mid;
+		}
+
+		scan.close();
+	}
+}

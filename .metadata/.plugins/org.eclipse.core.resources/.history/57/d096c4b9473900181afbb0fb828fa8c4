@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Set;
 
 class pos
 {
@@ -68,7 +69,6 @@ public class multimoo
 				{
 					regionNexts.put(count, new ArrayList<>());
 					region.put(count, new HashSet<>());
-					idOfRegion.put(count, map[i][j]);
 					max = Math.max(max, ff(i, j, count));
 					count++;
 				}

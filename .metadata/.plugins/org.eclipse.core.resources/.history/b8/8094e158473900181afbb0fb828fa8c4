@@ -12,16 +12,19 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
+import java.util.Set;
 
 class pos
 {
 	int x;
 	int y;
+	int id;
 
-	public pos(int x, int y)
+	public pos(int x, int y, int id)
 	{
 		this.x = x;
 		this.y = y;
+		this.id = id;
 	}
 }
 
@@ -68,7 +71,6 @@ public class multimoo
 				{
 					regionNexts.put(count, new ArrayList<>());
 					region.put(count, new HashSet<>());
-					idOfRegion.put(count, map[i][j]);
 					max = Math.max(max, ff(i, j, count));
 					count++;
 				}
@@ -102,8 +104,7 @@ public class multimoo
 		LinkedList<pos> q = new LinkedList<>();
 		visited[x][y] = true;
 		int id = map[x][y];
-		q.add(new pos(x, y));
-		region.get(count).add(new pos(x, y));
+		q.add(new pos(x, y, id));
 		while (!q.isEmpty())
 		{
 			pos curr = q.poll();
@@ -113,12 +114,12 @@ public class multimoo
 				{
 					if (map[curr.x + dx[i]][curr.y + dy[i]] == id)
 					{
-						q.add(new pos(curr.x + dx[i], curr.y + dy[i]));
+						q.add(new pos(curr.x + dx[i], curr.y + dy[i], id));
 						visited[curr.x + dx[i]][curr.y + dy[i]] = true;
-						region.get(count).add(new pos(curr.x + dx[i], curr.y + dy[i]));
 					}
 					else
-						regionNexts.get(count).add(new pos(curr.x + dx[i], curr.y + dy[i]));
+						regionNexts.get(count).add(new pos(curr.x + dx[i], curr.y + dy[i], id));
+					region.get(count).add(new pos(curr.x + dx[i], curr.y + dy[i], id));
 				}
 		}
 		return region.get(count).size();
