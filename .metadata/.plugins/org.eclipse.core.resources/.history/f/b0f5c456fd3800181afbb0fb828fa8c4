@@ -17,13 +17,11 @@ class pos
 {
 	int x;
 	int y;
-	int id;
 
-	public pos(int x, int y, int id)
+	public pos(int x, int y)
 	{
 		this.x = x;
 		this.y = y;
-		this.id = id;
 	}
 }
 
@@ -99,9 +97,9 @@ public class multimoo
 		int[] dy =
 			{ 1, -1, 0, 0 };
 		LinkedList<pos> q = new LinkedList<>();
+		q.add(new pos(x, y));
 		visited[x][y] = true;
 		int id = map[x][y];
-		q.add(new pos(x, y, id));
 		while (!q.isEmpty())
 		{
 			pos curr = q.poll();
@@ -111,14 +109,14 @@ public class multimoo
 				{
 					if (map[curr.x + dx[i]][curr.y + dy[i]] == id)
 					{
-						q.add(new pos(curr.x + dx[i], curr.y + dy[i], id));
+						q.add(new pos(curr.x + dx[i], curr.y + dy[i]));
 						visited[curr.x + dx[i]][curr.y + dy[i]] = true;
 					}
 					else
-						regionNexts.get(count).add(new pos(curr.x + dx[i], curr.y + dy[i], id));
-					region.get(count).add(new pos(curr.x + dx[i], curr.y + dy[i], id));
+						regionNexts.get(count).add(new pos(curr.x + dx[i], curr.y + dy[i]));
+					region.get(count).add(new pos(curr.x + dx[i], curr.y + dy[i]));
 				}
 		}
-		return region.get(count).size();
+		return regionCounts.get(count);
 	}
 }

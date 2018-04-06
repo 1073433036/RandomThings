@@ -13,7 +13,7 @@ public class makePassword
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println("This is a complex password generator.");
-		System.out.print("Do you want to (1) make an entirely new password, or (2) change your current one: ");
+		System.out.print("Do you want to (1) make an entirely new password, or (2)change your current one: ");
 		String pass = "";
 		if (!repeatUntilGood(scan.next(), scan))
 		{
