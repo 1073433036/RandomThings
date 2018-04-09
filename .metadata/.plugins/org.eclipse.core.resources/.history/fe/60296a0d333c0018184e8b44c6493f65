@@ -57,7 +57,7 @@ public class makePassword
 	public static String editPassword(String password)
 	{
 		while (password.length() < 8)
-			if (password.equals(""))
+			if (password == "")
 				password = randomWord();
 			else
 				password += " " + randomWord();
