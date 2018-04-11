@@ -1,9 +1,0 @@
-package MATHISNOTMETH;
-
-public class evaluate
-{
-	public static void main(String[] args)
-	{
-		
-	}
-}
