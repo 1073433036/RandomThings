@@ -6,12 +6,16 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="" key="selection"/>
+		<item value="3" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="4"/>
+			<item value="3"/>
+			<item value="2"/>
+			<item value="1"/>
 			<item value="fuck"/>
 			<item value="ife"/>
 			<item value="iawef"/>
@@ -23,12 +27,12 @@
 			<item value="aa"/>
 			<item value="ass "/>
 			<item value="cun"/>
-			<item value="cunt"/>
-			<item value="bitc"/>
-			<item value="bitch"/>
-			<item value="cu"/>
 		</list>
 		<list key="replacehistory">
+			<item value="3"/>
+			<item value="2"/>
+			<item value="1"/>
+			<item value="0"/>
 			<item value=" "/>
 			<item value="floodfill"/>
 			<item value="y"/>
@@ -40,10 +44,6 @@
 			<item value="ruler"/>
 			<item value="fibonacci"/>
 			<item value="add"/>
-			<item value=".nextInt()"/>
-			<item value="0"/>
-			<item value="&lt;Integer&gt;"/>
-			<item value=")"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
