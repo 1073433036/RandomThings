@@ -208,5 +208,4 @@ public class stuff
             res*=a;
         return res;
     }
-
 }
