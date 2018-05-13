@@ -41,4 +41,6 @@
 			<item value="org.eclipse.buildship.ui.importwizards"/>
 		</list>
 	</section>
+	<section name="ZipFileImportWizard">
+	</section>
 </section>

@@ -7,14 +7,15 @@ public class largestSalary
 	public static void main(String[] args)
 	{
 		Scanner scan = new Scanner(System.in);
-		int[] list = new int[scan.nextInt()];
-		int[] prefixsum = new int[list.length];
+		int nums=scan.nextInt();
+		int[] list = new int[nums];
+		int[] prefixsum = new int[nums];
 		int max = 0;
-		int[] sums = new int[list.length];
+		int[] sums = new int[nums];
 		list[0] = scan.nextInt();
 		prefixsum[0] = list[0];
 		sums[0] = list[0];
-		for (int i = 1; i < list.length; i++)
+		for (int i = 1; i < nums; i++)
 		{
 			list[i] = scan.nextInt();
 			prefixsum[i] = prefixsum[i - 1] + list[i];

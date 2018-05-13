@@ -25,7 +25,7 @@
 	<item value="893" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.preferred_width"/>
 	<item value="1037" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_width"/>
 	<item value="888" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_height"/>
-	<item value="/Users/JustinKim/Documents/workspace/RANDOM/machine vision/boofcv-v0.29-libs" key="org.eclipse.jdt.ui.lastextjar"/>
+	<item value="/Users/JustinKim/Documents/workspace/RANDOM/EXT ARCHIVE/machine vision/boofcv-v0.29-libs" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="4" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.last_focus"/>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 		<item value="false" key="updateQualifiedNames"/>
