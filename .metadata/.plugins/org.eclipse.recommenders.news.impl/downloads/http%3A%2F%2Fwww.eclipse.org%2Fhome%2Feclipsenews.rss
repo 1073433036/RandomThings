@@ -9,6 +9,14 @@
       <title>eclipse.org</title>
       <link>http://www.eclipse.org</link>
     </image>
+     <item>
+      <title><![CDATA[Eclipse Common Build Infrastructure: Upcoming Changes]]></title>
+      <link><![CDATA[https://www.youtube.com/watch?v=nvzqdQmw9gY&feature=youtu.be]]></link>
+      <description><![CDATA[Eclipse CBI is undergoing important changes, including Kubernetes/ Docker via Red Hat OpenShift & CloudBees Jenkins Enterprise.]]></description>
+      <pubDate>Thu, 10 May 2018 09:00:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
     <item>
       <title><![CDATA[Eclipse Newsletter - Java Tools and Runtimes]]></title>
       <link><![CDATA[https://www.eclipse.org/community/eclipse_newsletter/2018/april/]]></link>
