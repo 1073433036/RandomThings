@@ -32,7 +32,7 @@ public class divgold
 
 		int end = 0;
 		for (int i = total / 2; i >= 0; i--)
-			if (ways[sack.length % 2][i] > 0)
+			if (ways[sack.length % 2][i] > 0 && i == subset[sack.length % 2][total / 2])
 			{
 				end = ways[sack.length % 2][i];
 				break;

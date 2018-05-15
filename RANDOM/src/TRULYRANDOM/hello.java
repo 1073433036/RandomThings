@@ -9,7 +9,6 @@ public class hello
 {
 	public static void main(String[] args) throws IOException
 	{
-		Document doc = Jsoup.connect("https://www.setgame.com/set/puzzle").get();
-		
+		Document doc=Jsoup.connect("wikipedia.org").get();
 	}
 }
