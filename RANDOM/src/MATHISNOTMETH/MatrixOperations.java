@@ -4,7 +4,6 @@ public class MatrixOperations
 {
 	public static double[][] multiply(double[][] m1, double[][] m2)
 	{
-
 		int m1Rows = m1.length;
 		int m1Columns = m1[0].length;
 		int m2Rows = m2.length;
