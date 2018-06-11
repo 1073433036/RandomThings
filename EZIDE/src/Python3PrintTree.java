@@ -2,6 +2,8 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
+import java.util.HashSet;
+import java.util.TreeSet;
 
 import org.antlr.v4.runtime.ANTLRInputStream;
 import org.antlr.v4.runtime.CommonTokenStream;
@@ -16,7 +18,7 @@ public class Python3PrintTree
 	{
 		ParserFacade parserFacade = new ParserFacade();
 		AstPrinter astPrinter = new AstPrinter();
-		astPrinter.print(parserFacade.parse(new File("simple1.py")));
+		astPrinter.print(parserFacade.parse(new File("test.py")));
 	}
 }
 
@@ -31,7 +33,7 @@ class ParserFacade
 
 	public Python3Parser.File_inputContext parse(File file) throws IOException
 	{
-		String code = readFile(file, Charset.forName("UTF-8"));
+		String code = readFile(file, Charset.forName("UTF-8")) + "\n";
 		Python3Lexer lexer = new Python3Lexer(new ANTLRInputStream(code));
 
 		CommonTokenStream tokens = new CommonTokenStream(lexer);
@@ -44,7 +46,7 @@ class ParserFacade
 
 class AstPrinter
 {
-
+	private TreeSet<String> atoms = new TreeSet<>();
 	private boolean ignoringWrappers = true;
 
 	public void setIgnoringWrappers(boolean ignoringWrappers)
@@ -64,11 +66,13 @@ class AstPrinter
 		if (!toBeIgnored)
 		{
 			String ruleName = Python3Parser.ruleNames[ctx.getRuleIndex()];
-			for (int i = 0; i < indentation; i++)
-			{
-				System.out.print("  ");
-			}
-			System.out.println(ruleName + ": " + ctx.getText());
+			// for (int i = 0; i < indentation; i++)
+			// {
+			// System.out.print(" ");
+			// }
+			// System.out.println(ruleName + ": " + ctx.getText());
+			if (ruleName.equals("atom"))
+				atoms.add(ctx.getText());
 		}
 		for (int i = 0; i < ctx.getChildCount(); i++)
 		{
@@ -78,6 +82,11 @@ class AstPrinter
 				explore((RuleContext) element, indentation + (toBeIgnored ? 0 : 1));
 			}
 		}
+	}
+
+	public TreeSet<String> getAtoms()
+	{
+		return atoms;
 	}
 
 }
