@@ -18,7 +18,7 @@ public class Python3PrintTree
 	{
 		ParserFacade parserFacade = new ParserFacade();
 		AstPrinter astPrinter = new AstPrinter();
-		astPrinter.print(parserFacade.parse(new File("test.py")));
+		astPrinter.print(parserFacade.parse(new File("simple2.py")));
 	}
 }
 
@@ -47,7 +47,7 @@ class ParserFacade
 class AstPrinter
 {
 	private TreeSet<String> atoms = new TreeSet<>();
-	private boolean ignoringWrappers = true;
+	private boolean ignoringWrappers = false;
 
 	public void setIgnoringWrappers(boolean ignoringWrappers)
 	{
@@ -59,6 +59,8 @@ class AstPrinter
 		explore(ctx, 0);
 	}
 
+	static int times = 0;
+
 	private void explore(RuleContext ctx, int indentation)
 	{
 		boolean toBeIgnored = ignoringWrappers && ctx.getChildCount() == 1
@@ -66,21 +68,21 @@ class AstPrinter
 		if (!toBeIgnored)
 		{
 			String ruleName = Python3Parser.ruleNames[ctx.getRuleIndex()];
-			// for (int i = 0; i < indentation; i++)
-			// {
-			// System.out.print(" ");
-			// }
-			// System.out.println(ruleName + ": " + ctx.getText());
-			if (ruleName.equals("atom"))
-				atoms.add(ctx.getText());
+			if (!ruleName.equals("file_input"))
+			{
+				for (int i = 0; i < indentation; i++)
+					System.out.print(" ");
+				System.out.println(ruleName + ": " + ctx.getText().trim());
+			}
+			else
+				System.out.println(ruleName + ":");
 		}
+
 		for (int i = 0; i < ctx.getChildCount(); i++)
 		{
 			ParseTree element = ctx.getChild(i);
 			if (element instanceof RuleContext)
-			{
 				explore((RuleContext) element, indentation + (toBeIgnored ? 0 : 1));
-			}
 		}
 	}
 

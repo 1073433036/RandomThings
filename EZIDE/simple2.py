@@ -1,1 +1,3 @@
-a=b=1*1
+class m:
+    def asdf():
+        print("asdf")
