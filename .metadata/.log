@@ -7328,3 +7328,83 @@ Binding(ALT+COMMAND+B,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.jdt.ui.breadcrumbEditorScope,,cocoa,system)
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-06-13 19:05:10.757
+!MESSAGE An internal error occurred during: "building parse tree scheduler".
+!STACK 0
+java.util.UnknownFormatConversionException: Conversion = '''
+	at java.util.Formatter.checkText(Formatter.java:2579)
+	at java.util.Formatter.parse(Formatter.java:2565)
+	at java.util.Formatter.format(Formatter.java:2501)
+	at java.util.Formatter.format(Formatter.java:2455)
+	at java.lang.String.format(String.java:2940)
+	at com.github.jknack.antlr4ide.ui.console.DefaultConsole.error(DefaultConsole.java:35)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator$8.apply(ParseTreeGenerator.java:355)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator$8.apply(ParseTreeGenerator.java:1)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator.connect(ParseTreeGenerator.java:466)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator.doBuild(ParseTreeGenerator.java:443)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator.build(ParseTreeGenerator.java:160)
+	at com.github.jknack.antlr4ide.ui.parsetree.ParseTreeView$2$1.apply(ParseTreeView.java:152)
+	at com.github.jknack.antlr4ide.ui.parsetree.ParseTreeView$2$1.apply(ParseTreeView.java:1)
+	at com.github.jknack.antlr4ide.generator.Jobs$1.run(Jobs.java:33)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-06-13 19:05:15.739
+!MESSAGE An internal error occurred during: "building parse tree scheduler".
+!STACK 0
+java.util.UnknownFormatConversionException: Conversion = '''
+	at java.util.Formatter.checkText(Formatter.java:2579)
+	at java.util.Formatter.parse(Formatter.java:2565)
+	at java.util.Formatter.format(Formatter.java:2501)
+	at java.util.Formatter.format(Formatter.java:2455)
+	at java.lang.String.format(String.java:2940)
+	at com.github.jknack.antlr4ide.ui.console.DefaultConsole.error(DefaultConsole.java:35)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator$8.apply(ParseTreeGenerator.java:355)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator$8.apply(ParseTreeGenerator.java:1)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator.connect(ParseTreeGenerator.java:466)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator.doBuild(ParseTreeGenerator.java:443)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator.build(ParseTreeGenerator.java:160)
+	at com.github.jknack.antlr4ide.ui.parsetree.ParseTreeView$2$1.apply(ParseTreeView.java:152)
+	at com.github.jknack.antlr4ide.ui.parsetree.ParseTreeView$2$1.apply(ParseTreeView.java:1)
+	at com.github.jknack.antlr4ide.generator.Jobs$1.run(Jobs.java:33)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-06-13 19:05:22.331
+!MESSAGE An internal error occurred during: "building parse tree scheduler".
+!STACK 0
+java.util.UnknownFormatConversionException: Conversion = '''
+	at java.util.Formatter.checkText(Formatter.java:2579)
+	at java.util.Formatter.parse(Formatter.java:2565)
+	at java.util.Formatter.format(Formatter.java:2501)
+	at java.util.Formatter.format(Formatter.java:2455)
+	at java.lang.String.format(String.java:2940)
+	at com.github.jknack.antlr4ide.ui.console.DefaultConsole.error(DefaultConsole.java:35)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator$8.apply(ParseTreeGenerator.java:355)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator$8.apply(ParseTreeGenerator.java:1)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator.connect(ParseTreeGenerator.java:466)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator.doBuild(ParseTreeGenerator.java:443)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator.build(ParseTreeGenerator.java:160)
+	at com.github.jknack.antlr4ide.ui.parsetree.ParseTreeView$2$1.apply(ParseTreeView.java:152)
+	at com.github.jknack.antlr4ide.ui.parsetree.ParseTreeView$2$1.apply(ParseTreeView.java:1)
+	at com.github.jknack.antlr4ide.generator.Jobs$1.run(Jobs.java:33)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.core.jobs 4 2 2018-06-13 19:05:27.044
+!MESSAGE An internal error occurred during: "building parse tree scheduler".
+!STACK 0
+java.util.UnknownFormatConversionException: Conversion = '''
+	at java.util.Formatter.checkText(Formatter.java:2579)
+	at java.util.Formatter.parse(Formatter.java:2565)
+	at java.util.Formatter.format(Formatter.java:2501)
+	at java.util.Formatter.format(Formatter.java:2455)
+	at java.lang.String.format(String.java:2940)
+	at com.github.jknack.antlr4ide.ui.console.DefaultConsole.error(DefaultConsole.java:35)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator$8.apply(ParseTreeGenerator.java:355)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator$8.apply(ParseTreeGenerator.java:1)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator.connect(ParseTreeGenerator.java:466)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator.doBuild(ParseTreeGenerator.java:443)
+	at com.github.jknack.antlr4ide.parsetree.ParseTreeGenerator.build(ParseTreeGenerator.java:160)
+	at com.github.jknack.antlr4ide.ui.parsetree.ParseTreeView$2$1.apply(ParseTreeView.java:152)
+	at com.github.jknack.antlr4ide.ui.parsetree.ParseTreeView$2$1.apply(ParseTreeView.java:1)
+	at com.github.jknack.antlr4ide.generator.Jobs$1.run(Jobs.java:33)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
