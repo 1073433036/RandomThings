@@ -188,12 +188,12 @@ class AstPrinter
 				break;
 			case 40:			// async_stmt
 				break;
-			case 41:			// if_stmt
-				break;
+			// case 41: // if_stmt
+			// break;
 			case 42:			// while_stmt
 				break;
-			case 43:			// for_stmt
-				break;
+			// case 43: // for_stmt
+			// break;
 			case 44:			// try_stmt
 				break;
 			case 45:			// with_stmt
@@ -219,8 +219,10 @@ class AstPrinter
 			case 55:			// not_test
 				break;
 			case 56:			// comparison
+				System.out.println(text);
 				break;
 			case 57:			// comp_op
+				System.out.println(text);
 				break;
 			case 58:			// star_expr
 				break;
