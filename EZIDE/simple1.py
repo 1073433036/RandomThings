@@ -1,2 +1,2 @@
-a=b=2
-print(a)
+def asdf(asdf):
+    print("ASD")
