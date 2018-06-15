@@ -235,8 +235,10 @@ class AstPrinter
 			case 62:			// shift_expr
 				break;
 			case 63:			// arith_expr
+				System.out.println(text);
 				break;
 			case 64:			// term
+				System.out.println(text);
 				break;
 			case 65:			// factor
 				break;
@@ -248,8 +250,8 @@ class AstPrinter
 			case 68:			// atom
 				System.out.println(text);
 				break;
-			case 69:			// testlist_comp
-				break;
+			// case 69: // testlist_comp
+			// break;
 			case 70: // trailer
 				System.out.println(text);
 				break;
@@ -269,8 +271,8 @@ class AstPrinter
 				String classname = text.substring(5, text.indexOf("("));
 				System.out.println(classname);
 				break;
-			case 78:			// arglist
-				break;
+			// case 78: // arglist
+			// break;
 			case 79:			// argument
 				break;
 			case 80:			// comp_iter
