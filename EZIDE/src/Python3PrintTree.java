@@ -1,8 +1,9 @@
+
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
-import java.util.HashSet;
+import java.util.TreeMap;
 import java.util.TreeSet;
 
 import org.antlr.v4.runtime.ANTLRInputStream;
@@ -18,11 +19,11 @@ public class Python3PrintTree
 	{
 		ParserFacade parserFacade = new ParserFacade();
 		AstPrinter astPrinter = new AstPrinter();
-		astPrinter.print(parserFacade.parse(new File("simple2.py")));
+		astPrinter.print(parserFacade.parse(new File("simple1.py")));
 	}
 }
 
-class ParserFacade
+ class ParserFacade
 {
 
 	private static String readFile(File file, Charset encoding) throws IOException
@@ -47,6 +48,7 @@ class ParserFacade
 class AstPrinter
 {
 	private TreeSet<String> classes = new TreeSet<>();
+	private TreeMap<String, Variable> variables = new TreeMap<>();
 	private boolean ignoringWrappers = true;
 
 	public void setIgnoringWrappers(boolean ignoringWrappers)
@@ -68,7 +70,7 @@ class AstPrinter
 			// indentation
 			indent(indentation);
 
-			writeStmts(ctx);
+			writeStmts(ctx, indentation);
 		}
 
 		for (int i = 0; i < ctx.getChildCount(); i++)
@@ -85,7 +87,7 @@ class AstPrinter
 			System.out.print("| ");
 	}
 
-	private void writeStmts(RuleContext ctx)
+	private void writeStmts(RuleContext ctx, int indentation)
 	{
 		String text = ctx.getText().trim();
 		int rule = ctx.getRuleIndex();
@@ -302,6 +304,83 @@ class AstPrinter
 	public TreeSet<String> getClasses()
 	{
 		return classes;
+	}
+
+}
+
+class Variable
+{
+	private boolean instVar;		// class var or instance var
+	private String instName = "";
+	private String varType;
+	private String value;
+	private int indentLvl;
+
+	public Variable(String instNm, String varTp, String val, int idtlvl)
+	{
+		setInstVar(true);
+		setInstName(instNm);
+		setVarType(varTp);
+		setValue(val);
+		setIndentLvl(idtlvl);
+	}
+
+	public Variable(String varTp, String val, int idtlvl)
+	{
+		setInstVar(false);
+		setVarType(varTp);
+		setValue(val);
+		setIndentLvl(idtlvl);
+	}
+
+	public boolean isInstVar()
+	{
+		return instVar;
+	}
+
+	public void setInstVar(boolean instVar)
+	{
+		this.instVar = instVar;
+	}
+
+	public String getInstName()
+	{
+		return instName;
+	}
+
+	public void setInstName(String instName)
+	{
+		this.instName = instName;
+	}
+
+	public String getVarType()
+	{
+		return varType;
+	}
+
+	public void setVarType(String varType)
+	{
+		this.varType = varType;
+	}
+
+	public String getValue()
+	{
+		return value;
+	}
+
+	public void setValue(String value)
+	{
+		this.value = value;
+	}
+
+	public int getIndentLvl()
+	{
+		return indentLvl;
+	}
+
+	public void setIndentLvl(int indentLvl)
+	{
+		this.indentLvl = indentLvl;
 	}
 
 }
