@@ -1,67 +1,113 @@
-from unittest import TestCase
-import io
+'''Conway's Game Of Life, Author Anurag Kumar(mailto:anuragkumarak95@gmail.com) 
+Requirements:
+  - numpy
+  - random
+  - time
+  - matplotlib
+Python:
+  - 3.5
+Usage:
+  - $python3 game_o_life <canvas_size:int>
+Game-Of-Life Rules:
+ 
+ 1.
+ Any live cell with fewer than two live neighbours
+ dies, as if caused by under-population.
+ 2.
+ Any live cell with two or three live neighbours lives
+ on to the next generation.
+ 3.
+ Any live cell with more than three live neighbours
+ dies, as if by over-population.
+ 4.
+ Any dead cell with exactly three live neighbours be-
+ comes a live cell, as if by reproduction.
+ '''
+import numpy as np
+import random, time, sys
+from matplotlib import pyplot as plt
+import matplotlib.animation as animation
+from matplotlib.colors import ListedColormap
 
-import pytest
-from antlr4 import *
-from antlr4.error.ErrorListener import *
+usage_doc='Usage of script: script_nama <size_of_canvas:int>'
 
-from gen.Python3Lexer import Python3Lexer
-from gen.Python3Parser import Python3Parser
-from gen.Python3Listener import Python3Listener
+choice = [0]*100 + [1]*10
+random.shuffle(choice)
+
+def create_canvas(size):
+    canvas = [ [False for i in range(size)] for j in range(size)]
+    return canvas
+
+def seed(canvas):
+    for i,row in enumerate(canvas):
+        for j,_ in enumerate(row):
+            canvas[i][j]=bool(random.getrandbits(1))
+
+def run(canvas):
+    ''' This  function runs the rules of game through all points, and changes their status accordingly.(in the same canvas)
+    @Args:
+    --
+    canvas : canvas of population to run the rules on.
+    @returns:
+    --
+    None
+    '''
+    canvas = np.array(canvas)
+    next_gen_canvas = np.array(create_canvas(canvas.shape[0]))
+    for r, row in enumerate(canvas):
+        for c, pt in enumerate(row):
+            # print(r-1,r+2,c-1,c+2)
+            next_gen_canvas[r][c] = __judge_point(pt,canvas[r-1:r+2,c-1:c+2])
+    
+    canvas = next_gen_canvas
+    del next_gen_canvas # cleaning memory as we move on.
+    return canvas.tolist()   
+
+def __judge_point(pt,neighbours):
+    dead  = 0
+    alive = 0
+    # finding dead or alive neighbours count.
+    for i in neighbours:
+        for status in i:
+            if status: alive+=1
+            else: dead+=1
+
+    # handling duplicate entry for focus pt.
+    if pt : alive-=1
+    else : dead-=1
+    
+    # running the rules of game here.
+    state = pt
+    if pt:
+        if alive<2:
+            state=False
+        elif alive==2 or alive==3:
+            state=True
+        elif alive>3:
+            state=False
+    else:
+        if alive==3:
+            state=True
+
+    return state
 
 
-class Python3ErrorListener(ErrorListener):
-    def __init__(self, output):
-        self.output = output
-        self._symbol = ''
-
-    def syntaxError(self, recognizer, offendingSymbol, line, column, msg, e):
-        self.output.write(msg)
-        self._symbol = offendingSymbol.text
-        stack = recognizer.getRuleInvocationStack()
-        stack.reverse()
-        print("rule stack: {}".format(str(stack)))
-        print("line {} : {} at {} : {}".format(str(line),
-                                               str(column),
-                                               str(offendingSymbol).replace(" ", u'\u23B5'),
-                                               msg.replace(" ", u'\u23B5')))
-
-    @property
-    def symbol(self):
-        return self._symbol
-
-
-class Python3ParserTests(TestCase):
-
-    def setup(self, path):
-        input = FileStream(path)
-        lexer = Python3Lexer(input)
-        stream = CommonTokenStream(lexer)
-
-        # print out the token parsing
-        stream.fill()
-        print("TOKENS")
-        for token in stream.tokens:
-            if token.text != '<EOF>':
-                type_name = Python3Parser.symbolicNames[token.type]
-                tabs = 5 - len(type_name) // 4
-                sep = "\t" * tabs
-                print("    %s%s%s" % (type_name, sep,
-                                      token.text.replace(" ", u'\u23B5').replace("\n", u'\u2936')))
-        parser = Python3Parser(stream)
-
-        self.output = io.StringIO()
-        self.error = io.StringIO()
-
-        parser.removeErrorListeners()
-        self.errorListener = Python3ErrorListener(self.error)
-        parser.addErrorListener(self.errorListener)
-        return parser
-
-    def test_python3_test_grammar(self):
-        parser = self.setup("../examples/test_grammar.py")
-        tree = parser.file_input()
-        listener = Python3Listener()
-        walker = ParseTreeWalker()
-        walker.walk(listener, tree)
-        self.assertEqual(len(self.errorListener.symbol), 0)
+if __name__=='__main__':
+    if len(sys.argv) != 2: raise Exception(usage_doc)
+   
+    canvas_size = int(sys.argv[1])
+    # main working structure of this module.
+    c=create_canvas(canvas_size)
+    seed(c)
+    fig, ax = plt.subplots()
+    fig.show() 
+    cmap = ListedColormap(['w','k'])
+    try:
+        while True:
+            c = run(c)            
+            ax.matshow(c,cmap=cmap)
+            fig.canvas.draw()
+            ax.cla() 
+    except KeyboardInterrupt:
+        # do nothing.
+        pass

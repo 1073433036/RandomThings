@@ -89,6 +89,7 @@ class AstPrinter
 		String text = ctx.getText().trim();
 		int rule = ctx.getRuleIndex();
 		String interval = "" + ctx.getSourceInterval();
+		RuleContext parent = ctx.getParent();
 
 		System.out.print(interval + " " + Python3Parser.ruleNames[rule] + " (" + rule + "): ");
 
@@ -99,21 +100,21 @@ class AstPrinter
 
 		switch (rule)
 		{
-			case 0:				// single_input
-				break;
+			// case 0: // single_input
+			// break;
 			// case 1: // file_input
 			// break;
-			case 2:				// eval_input
-				break;
+			// case 2: // eval_input
+			// break;
 			case 3:				// decorator
 				System.out.println(text);
 				break;
-			case 4:				// decorators
-				break;
+			// case 4: // decorators
+			// break;
 			// case 5: // decorated
 			// break;
-			case 6:				// async_funcdef
-				break;
+			// case 6: // async_funcdef
+			// break;
 			case 7:				// funcdef
 				String functionName = text.substring(3, text.indexOf("("));
 				System.out.println(functionName);
@@ -125,43 +126,43 @@ class AstPrinter
 			case 10:			// tfpdef
 				System.out.println(text);
 				break;
-			case 11:			// varargslist
-				break;
-			case 12:			// vfpdef
-				break;
+			// case 11: // varargslist
+			// break;
+			// case 12: // vfpdef
+			// break;
 			case 13:			// stmt
 				break;
 			// case 14: // simple_stmt
 			// break;
-			case 15:			// small_stmt
-				break;
+			// case 15: // small_stmt
+			// break;
 			case 16:			// expr_stmt
 				System.out.println(text);
 				break;
 			case 17:			// annassign
 				break;
-			case 18:			// testlist_star_expr
-				break;
-			case 19:			// augassign
-				break;
-			case 20:			// del_stmt
-				break;
-			case 21:			// pass_stmt
-				break;
-			case 22:			// flow_stmt
-				break;
-			case 23:			// break_stmt
-				break;
+			// case 18: // testlist_star_expr
+			// break;
+			// case 19: // augassign
+			// break;
+			// case 20: // del_stmt
+			// break;
+			// case 21: // pass_stmt
+			// break;
+			// case 22: // flow_stmt
+			// break;
+			// case 23: // break_stmt
+			// break;
 			case 24:			// continue_stmt
 				break;
 			// case 25: // return_stmt
 			// break;
 			case 26:			// yield_stmt
 				break;
-			case 27:			// raise_stmt
-				break;
-			case 28:			// import_stmt
-				break;
+			// case 27: // raise_stmt
+			// break;
+			// case 28: // import_stmt
+			// break;
 			// case 29: // import_name
 			// break;
 			// case 30: // import_from
@@ -169,124 +170,128 @@ class AstPrinter
 			case 31:			// import_as_name
 				System.out.println(text);
 				break;
-			case 32:			// dotted_as_name
-				break;
-			case 33:			// import_as_names
-				break;
-			case 34:			// dotted_as_names
-				break;
+			// case 32: // dotted_as_name
+			// break;
+			// case 33: // import_as_names
+			// break;
+			// case 34: // dotted_as_names
+			// break;
 			case 35:			// dotted_name
 				System.out.println(text);
 				break;
-			case 36:			// global_stmt
-				break;
-			case 37:			// nonlocal_stmt
-				break;
-			case 38:			// assert_stmt
-				break;
-			case 39:			// compound_stmt
-				break;
-			case 40:			// async_stmt
-				break;
+			// case 36: // global_stmt
+			// break;
+			// case 37: // nonlocal_stmt
+			// break;
+			// case 38: // assert_stmt
+			// break;
+			// case 39: // compound_stmt
+			// break;
+			// case 40: // async_stmt
+			// break;
 			// case 41: // if_stmt
 			// break;
-			case 42:			// while_stmt
-				break;
+			// case 42: // while_stmt
+			// break;
 			// case 43: // for_stmt
 			// break;
-			case 44:			// try_stmt
-				break;
-			case 45:			// with_stmt
-				break;
-			case 46:			// with_item
-				break;
-			case 47:			// except_clause
-				break;
+			// case 44: // try_stmt
+			// break;
+			// case 45: // with_stmt
+			// break;
+			// case 46: // with_item
+			// break;
+			// case 47: // except_clause
+			// break;
 			// case 48: // suite
 			// break;
-			case 49:			// test
-				break;
-			case 50:			// test_nocond
-				break;
-			case 51:			// larmbdef
-				break;
-			case 52:			// lambdef_nocond
-				break;
-			case 53:			// or_test
-				break;
-			case 54:			// and_test
-				break;
-			case 55:			// not_test
-				break;
+			// case 49: // test
+			// break;
+			// case 50: // test_nocond
+			// break;
+			// case 51: // larmbdef
+			// break;
+			// case 52: // lambdef_nocond
+			// break;
+			// case 53: // or_test
+			// break;
+			// case 54: // and_test
+			// break;
+			// case 55: // not_test
+			// break;
 			case 56:			// comparison
 				System.out.println(text);
 				break;
 			case 57:			// comp_op
 				System.out.println(text);
 				break;
-			case 58:			// star_expr
-				break;
-			case 59:			// expr
-				break;
-			case 60:			// xor_expr
-				break;
-			case 61:			// and_expr
-				break;
-			case 62:			// shift_expr
-				break;
+			// case 58: // star_expr
+			// break;
+			// case 59: // expr
+			// break;
+			// case 60: // xor_expr
+			// break;
+			// case 61: // and_expr
+			// break;
+			// case 62: // shift_expr
+			// break;
 			case 63:			// arith_expr
 				System.out.println(text);
 				break;
 			case 64:			// term
 				System.out.println(text);
 				break;
-			case 65:			// factor
-				break;
-			case 66:			// power
-				break;
+			// case 65: // factor
+			// break;
+			// case 66: // power
+			// break;
 			case 67: 			// atom_expr
 				System.out.println(text);
 				break;
 			case 68:			// atom
-				System.out.println(text);
+				if (text.length() >= 6 && text.substring(0, 3).equals("'''"))
+					System.out.println("Multiline Comment");
+				else
+					System.out.println(text);
 				break;
 			// case 69: // testlist_comp
 			// break;
 			case 70: // trailer
 				System.out.println(text);
 				break;
-			case 71:			// subscriptlist
-				break;
+			// case 71: // subscriptlist
+			// break;
 			case 72:			// subscript
+				System.out.println(text);
 				break;
 			case 73:			// sliceop
 				break;
-			case 74:			// exprlist
-				break;
-			case 75:			// testlist
-				break;
-			case 76:			// dictorsetmaker
-				break;
+			// case 74: // exprlist
+			// break;
+			// case 75: // testlist
+			// break;
+			// case 76: // dictorsetmaker
+			// break;
 			case 77:			// classdef
 				String classname = text.substring(5, text.indexOf("("));
 				System.out.println(classname);
 				break;
 			// case 78: // arglist
 			// break;
-			case 79:			// argument
-				break;
-			case 80:			// comp_iter
-				break;
-			case 81:			// comp_for
-				break;
-			case 82:			// comp_if
-				break;
-			case 83:			// encoding_decl
-				break;
-			case 84:			// yield_expr
-				break;
-			case 85:			// yield_arg
-				break;
+			// case 79: // argument
+			// break;
+			// case 80: // comp_iter
+			// break;
+			// case 81: // comp_for
+			// break;
+			// case 82: // comp_if
+			// break;
+			// case 83: // encoding_decl
+			// break;
+			// case 84: // yield_expr
+			// break;
+			// case 85: // yield_arg
+			// break;
 			default:
 				System.out.println();
 				break;
