@@ -6,29 +6,30 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="test" key="selection"/>
+		<item value="Classdef" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="classdef"/>
+			<item value="class"/>
+			<item value="error"/>
+			<item value="System.out.println"/>
+			<item value="simple_stmt"/>
+			<item value="subscript"/>
+			<item value="STRING"/>
+			<item value="string"/>
+			<item value="atom"/>
+			<item value="variable"/>
+			<item value="int"/>
+			<item value="Python"/>
 			<item value="test"/>
 			<item value="testlist"/>
 			<item value="compound_stmt"/>
-			<item value="cos"/>
-			<item value="r"/>
-			<item value="list.length"/>
-			<item value="4"/>
-			<item value="3"/>
-			<item value="2"/>
-			<item value="1"/>
-			<item value="fuck"/>
-			<item value="ife"/>
-			<item value="iawef"/>
-			<item value="i"/>
-			<item value="iejfoaw"/>
 		</list>
 		<list key="replacehistory">
+			<item value="AltPython"/>
 			<item value="nums"/>
 			<item value="3"/>
 			<item value="2"/>
@@ -43,7 +44,6 @@
 			<item value="cows[i]"/>
 			<item value="maze"/>
 			<item value="ruler"/>
-			<item value="fibonacci"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

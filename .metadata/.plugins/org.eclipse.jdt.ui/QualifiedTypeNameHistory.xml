@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="javax.swing.JFrame"/>
 <fullyQualifiedTypeName name="java.awt.Graphics"/>
 <fullyQualifiedTypeName name="javax.swing.WindowConstants"/>
@@ -48,4 +47,7 @@
 <fullyQualifiedTypeName name="org.antlr.v4.runtime.CommonTokenStream"/>
 <fullyQualifiedTypeName name="org.antlr.v4.runtime.ANTLRInputStream"/>
 <fullyQualifiedTypeName name="org.antlr.v4.runtime.tree.ParseTree"/>
+<fullyQualifiedTypeName name="java.awt.TexturePaint"/>
+<fullyQualifiedTypeName name="Python3Parser"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
