@@ -6,29 +6,31 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Classdef" key="selection"/>
+		<item value="Error" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="error"/>
+			<item value="// TODO Auto-generated method stub"/>
+			<item value="("/>
+			<item value="suitecontext"/>
+			<item value="suite"/>
+			<item value="suite context"/>
+			<item value="mismatched input"/>
 			<item value="classdef"/>
 			<item value="class"/>
-			<item value="error"/>
 			<item value="System.out.println"/>
 			<item value="simple_stmt"/>
 			<item value="subscript"/>
 			<item value="STRING"/>
 			<item value="string"/>
 			<item value="atom"/>
-			<item value="variable"/>
-			<item value="int"/>
-			<item value="Python"/>
-			<item value="test"/>
-			<item value="testlist"/>
-			<item value="compound_stmt"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
+			<item value="(Python3Parser."/>
 			<item value="AltPython"/>
 			<item value="nums"/>
 			<item value="3"/>
@@ -42,8 +44,6 @@
 			<item value="&gt;"/>
 			<item value="cows[j]"/>
 			<item value="cows[i]"/>
-			<item value="maze"/>
-			<item value="ruler"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

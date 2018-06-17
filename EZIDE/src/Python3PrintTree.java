@@ -14,7 +14,6 @@ import org.antlr.v4.runtime.tree.ParseTree;
 
 public class Python3PrintTree
 {
-
 	public static void main(String[] args) throws IOException
 	{
 		ParserFacade parserFacade = new ParserFacade();
