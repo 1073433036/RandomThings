@@ -37,8 +37,6 @@
 <fullyQualifiedTypeName name="java.util.HashMap"/>
 <fullyQualifiedTypeName name="org.jsoup.Jsoup"/>
 <fullyQualifiedTypeName name="org.jsoup.nodes.Document"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
@@ -60,4 +58,6 @@
 <fullyQualifiedTypeName name="Python3Parser.File_inputContext"/>
 <fullyQualifiedTypeName name="org.antlr.v4.runtime.tree.ParseTreeWalker"/>
 <fullyQualifiedTypeName name="org.antlr.v4.runtime.ANTLRErrorStrategy"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
