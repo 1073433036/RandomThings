@@ -6,11 +6,13 @@ public class Question
 {
 	private String question;
 	private Answer[] answers;
+	private boolean multipleChoice;
 
-	public Question(String question, Answer[] answers)
+	public Question(String question, Answer[] answers, boolean multipleChoice)
 	{
 		this.question = question;
 		this.answers = answers;
+		this.multipleChoice = multipleChoice;
 	}
 
 	public String getQuestion()
@@ -21,6 +23,11 @@ public class Question
 	public Answer[] getAnswers()
 	{
 		return answers;
+	}
+
+	public boolean isMultipleChoice()
+	{
+		return multipleChoice;
 	}
 
 	public Answer[] getCorrectAnswers()

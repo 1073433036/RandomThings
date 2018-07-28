@@ -1,22 +1,24 @@
 package main;
 
+import java.util.ArrayList;
+
 public class Student
 {
-	private String name;
-	private Answer[] selectedAnswers;
+	private String id;
+	private ArrayList<Answer> selectedAnswers;
 
-	public Student(String name, Answer[] selectedAnswers)
+	public Student(String id, ArrayList<Answer> selectedAnswers)
 	{
-		this.name = name;
+		this.id = id;
 		this.selectedAnswers = selectedAnswers;
 	}
 
-	public String getName()
+	public String getID()
 	{
-		return name;
+		return id;
 	}
 
-	public Answer[] getSelectedAnswers()
+	public ArrayList<Answer> getSelectedAnswers()
 	{
 		return selectedAnswers;
 	}
