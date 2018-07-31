@@ -3,20 +3,20 @@ package TRULYRANDOM;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
-class pos
-{
-	int x;
-	int y;
-
-	public pos(int x, int y)
-	{
-		this.x = x;
-		this.y = y;
-	}
-}
-
 public class stuff
 {
+	private static class pos
+	{
+		int x;
+		int y;
+
+		public pos(int x, int y)
+		{
+			this.x = x;
+			this.y = y;
+		}
+	}
+
 	static boolean[][] visited;
 	static int[][] map;
 
@@ -159,53 +159,54 @@ public class stuff
 		}
 		return min;
 	}
-	
+
 	static String[][] permute(String[] wordList)
-    {
-        if(wordList.length==1)
-        {
-            String[][] res={wordList};
-            return res;
-        }
-        String[][] res=new String[factorial(wordList.length)][wordList.length];
-        int count=0;
-        for(int i=0;i<wordList.length;i++)
-        {
-            String[][] next=permute(rem(wordList,wordList[i]));
-            for(int j=0;j<next.length;j++)
-            {
-                res[count][0]=wordList[i];
-                for(int k=0;k<next[0].length;k++)
-                {
-                    res[count][k+1]=next[j][k];
-                }
-                count++;
-            }
-        }
-        
-        return res;
-    }
+	{
+		if (wordList.length == 1)
+		{
+			String[][] res =
+				{ wordList };
+			return res;
+		}
+		String[][] res = new String[factorial(wordList.length)][wordList.length];
+		int count = 0;
+		for (int i = 0; i < wordList.length; i++)
+		{
+			String[][] next = permute(rem(wordList, wordList[i]));
+			for (int j = 0; j < next.length; j++)
+			{
+				res[count][0] = wordList[i];
+				for (int k = 0; k < next[0].length; k++)
+				{
+					res[count][k + 1] = next[j][k];
+				}
+				count++;
+			}
+		}
 
-    static String[] rem(String[] wordList,String word)
-    {
-        String[] res=new String[wordList.length-1];
-        int count=0;
-        for(int i=0;i<wordList.length;i++)
-        {
-            if(!wordList[i].equals(word))
-            {
-                res[count]=wordList[i];
-                count++;
-            }
-        }
-        return res;
-    }
+		return res;
+	}
 
-    static int factorial(int a)
-    {
-        int res=1;
-        for(;a>1;a--)
-            res*=a;
-        return res;
-    }
+	static String[] rem(String[] wordList, String word)
+	{
+		String[] res = new String[wordList.length - 1];
+		int count = 0;
+		for (int i = 0; i < wordList.length; i++)
+		{
+			if (!wordList[i].equals(word))
+			{
+				res[count] = wordList[i];
+				count++;
+			}
+		}
+		return res;
+	}
+
+	static int factorial(int a)
+	{
+		int res = 1;
+		for (; a > 1; a--)
+			res *= a;
+		return res;
+	}
 }

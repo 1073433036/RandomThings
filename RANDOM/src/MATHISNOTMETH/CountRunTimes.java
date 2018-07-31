@@ -12,15 +12,15 @@ public class CountRunTimes
 {
 	public static void main(String[] args) throws IOException
 	{
-		BufferedReader f = new BufferedReader(new FileReader("src/MATHISNOTMETH/print2.java"));
+		BufferedReader f = new BufferedReader(new FileReader("src/MATHISNOTMETH/CountRunTimes.java"));
 		ArrayList<String> file = new ArrayList<String>();
 		while (f.ready())
 			file.add(f.readLine());
 		f.close();
-		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("src/MATHISNOTMETH/print2.java")));
+		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("src/MATHISNOTMETH/CountRunTimes.java")));
 
 		@SuppressWarnings("unused")
-		int count = 3;
+		int count = 6;
 		for (String a : file)
 		{
 			if (a.length() > 14 && a.substring(0, 14).equals("		int count = "))
