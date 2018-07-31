@@ -1,14 +1,12 @@
 package weird;
 
-import java.io.*;          // put tester in file into usaco not bin/src the
-					          // folder with bin/src in it
+import java.io.*;
 import java.util.*;
 
 public class GrammaticallyCorrect
 {
 	public static void main(String[] args) throws IOException
 	{
-		// init
 		Scanner scan = new Scanner(System.in);
 		Random rand = new Random();
 		BufferedReader in = new BufferedReader(new FileReader("sentences.txt"));
@@ -32,7 +30,6 @@ public class GrammaticallyCorrect
 		String[] endpunct =
 			{ ".", "?", "!" };
 
-		// infinite loop
 		while (true)
 		{
 			// grammar check

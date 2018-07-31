@@ -6,12 +6,14 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="Error" key="selection"/>
+		<item value="]" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="]"/>
+			<item value="["/>
 			<item value="error"/>
 			<item value="// TODO Auto-generated method stub"/>
 			<item value="("/>
@@ -25,10 +27,10 @@
 			<item value="simple_stmt"/>
 			<item value="subscript"/>
 			<item value="STRING"/>
-			<item value="string"/>
-			<item value="atom"/>
 		</list>
 		<list key="replacehistory">
+			<item value="}"/>
+			<item value="{"/>
 			<item value=""/>
 			<item value="(Python3Parser."/>
 			<item value="AltPython"/>
@@ -42,8 +44,6 @@
 			<item value="y"/>
 			<item value="x"/>
 			<item value="&gt;"/>
-			<item value="cows[j]"/>
-			<item value="cows[i]"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

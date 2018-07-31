@@ -1,6 +1,6 @@
 package MATHISNOTMETH;
 import java.util.Scanner;
-public class QUADRATICFORMULA {
+public class QuadraticFormula {
 	public static void main(String args[])
 	{
 		double a,b,c;
