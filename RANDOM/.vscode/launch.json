@@ -10,6 +10,13 @@
       "request": "launch",
       "cwd": "${workspaceFolder}/src/scam",
       "program": "${workspaceFolder}/src/scam/3x3.py"
+    },
+    {
+      "name": "Launch fuelinjection.py",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/src/scam",
+      "program": "${workspaceFolder}/src/scam/fuelinjection.py"
     }
   ]
 }
