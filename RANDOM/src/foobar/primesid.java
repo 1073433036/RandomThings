@@ -1,9 +1,10 @@
-package scam;
+package foobar;
 
 public class primesid
 {
 	public static String answer(int n)
 	{
+		//calculate prime string
 		String primes = "2";
 		int tested = 3;
 		while (primes.length() <= n + 5)

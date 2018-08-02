@@ -1,4 +1,4 @@
-package scam;
+package foobar;
 
 public class lambdivision
 {
