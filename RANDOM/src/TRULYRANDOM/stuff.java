@@ -2,6 +2,7 @@ package TRULYRANDOM;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Queue;
 
 public class stuff
 {
@@ -41,11 +42,11 @@ public class stuff
 			{ 0, 0, 1, -1 };
 		int[] dy =
 			{ 1, -1, 0, 0 };
-		LinkedList<pos> q = new LinkedList<>();
+		Queue<pos> q = new LinkedList<>();
 		q.add(new pos(sx, sy));
 		while (!q.isEmpty())
 		{
-			pos curr = q.poll();
+			pos curr = q.remove();
 			if (curr.x == ex && curr.y == ey)
 				return;
 			for (int i = 0; i < 4; i++)

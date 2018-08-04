@@ -7,10 +7,8 @@ TASK: div7
 
 
 //package usaco;
-
-
-import java.io.*;
-import java.util.*;
+import java.io.IOException;
+import java.util.Arrays;
 
 import usaco.BufferedReader;
 import usaco.BufferedWriter;

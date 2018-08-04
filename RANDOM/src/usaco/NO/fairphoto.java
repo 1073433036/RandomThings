@@ -8,11 +8,10 @@ TASK: fairphoto
 
 //package usaco;
 
-
 //package usaco;
-
-import java.io.*;
-import java.util.*;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 
 import usaco.BufferedReader;
 import usaco.BufferedWriter;

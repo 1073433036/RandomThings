@@ -17,6 +17,13 @@
       "request": "launch",
       "cwd": "${workspaceFolder}/src/scam",
       "program": "${workspaceFolder}/src/scam/fuelinjection.py"
+    },
+    {
+      "name": "Launch Neural Network.py",
+      "type": "python",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/src/scam",
+      "program": "${workspaceFolder}/src/scam/Neural Network.py"
     }
   ]
 }

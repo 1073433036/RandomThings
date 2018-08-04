@@ -8,9 +8,10 @@ TASK: gpsduel
 
 //package usaco;
 
-
-import java.io.*;          //put tester in file into usaco not bin/src the folder with bin/src in it
-import java.util.*;
+//put tester in file into usaco not bin/src the folder with bin/src in it
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
 
 import usaco.BufferedReader;
 import usaco.BufferedWriter;

@@ -1,4 +1,3 @@
-import java.util.*;
 /*
  * while 2Repeat()
  * remove i and j from thesaurus
@@ -27,6 +26,10 @@ import java.util.*;
  * put thesaurus into string[]
  * return string[]
  */
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashSet;
 
 public class Thesaurus
 {

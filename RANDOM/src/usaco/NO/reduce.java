@@ -5,8 +5,7 @@ TASK: reduce
  */
 
 package usaco.NO;
-import java.io.*;
-import java.util.*;
+import java.io.IOException;
 
 import usaco.BufferedReader;
 import usaco.BufferedWriter;
