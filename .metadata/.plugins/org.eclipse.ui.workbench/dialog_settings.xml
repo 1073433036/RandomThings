@@ -22,8 +22,9 @@
 		</list>
 	</section>
 	<section name="NewWizardAction">
-		<item value="org.eclipse.jdt.ui.wizards.NewClassCreationWizard" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<item value="com.genuitec.eclipse.code.ui.codemix.python.file" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="com.genuitec.eclipse.code.ui.codemix.category"/>
 			<item value="org.eclipse.jdt.ui.java"/>
 			<item value="org.eclipse.xtend.ide.wizards"/>
 		</list>
