@@ -8648,3 +8648,77 @@ Caused by: org.eclipse.core.commands.ExecutionException: No activePart found whi
 	at java.lang.reflect.Method.invoke(Method.java:498)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
 	... 89 more
+!SESSION 2018-08-05 20:57:50.480 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/JustinKim/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data /Users/JustinKim/Documents/workspace/RANDOM -product org.eclipse.epp.package.java.product -keyring /Users/JustinKim/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-08-05 20:57:54.443
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.jface 2 0 2018-08-05 20:58:00.092
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-08-05 20:58:00.092
+!MESSAGE A conflict occurred for COMMAND+BS:
+Binding(COMMAND+BS,
+	ParameterizedCommand(Command(codemix.editor.action.deleteLines,Delete Lines,
+		,
+		Category(com.genuitec.eclipse.code.codeMix,CodeMix,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6afb240d,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,user)
+Binding(COMMAND+BS,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.text.delete.line,Delete Line,
+		Delete a line of text,
+		Category(org.eclipse.ui.category.textEditor,Text Editing,Text Editing Commands,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@272f5373,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,user)
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2018-08-05 21:40:25.433
+!MESSAGE Server returned lastModified <= 0 for https://raw.githubusercontent.com/antlr4ide/antlr4ide-eclipse-release/master/content.jar
+!SESSION 2018-08-06 21:35:20.838 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/JustinKim/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -data /Users/JustinKim/Documents/workspace/RANDOM -product org.eclipse.epp.package.java.product -keyring /Users/JustinKim/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-08-06 21:35:23.213
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.genuitec.eclipse.code.core 4 0 2018-08-06 21:35:50.734
+!MESSAGE CodeMix Engine Process has ended unexpectedly [137]: [91m[main 9:35:29 PM][0m SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>)
+    at FileStorage.loadSync (/Users/JustinKim/.codemix/engine/CodeMix Engine.app/Contents/Resources/app/out/vs/code/electron-main/main.js:19409:29)
+    at FileStorage.ensureLoaded (/Users/JustinKim/.codemix/engine/CodeMix Engine.app/Contents/Resources/app/out/vs/code/electron-main/main.js:19373:38)
+    at FileStorage.getItem (/Users/JustinKim/.codemix/engine/CodeMix Engine.app/Contents/Resources/app/out/vs/code/electron-main/main.js:19377:18)
+    at StateService.getItem (/Users/JustinKim/.codemix/engine/CodeMix Engine.app/Contents/Resources/app/out/vs/code/electron-main/main.js:19434:37)
+    at LifecycleService.handleRestarted (/Users/JustinKim/.codemix/engine/CodeMix Engine.app/Contents/Resources/app/out/vs/code/electron-main/main.js:20380:54)
+    at new LifecycleService (/Users/JustinKim/.codemix/engine/CodeMix Engine.app/Contents/Resources/app/out/vs/code/electron-main/main.js:20377:18)
+    at create (/Users/JustinKim/.codemix/engine/CodeMix Engine.app/Contents/Resources/app/out/vs/code/electron-main/main.js:3753:14)
+    at InstantiationService._createInstance (/Users/JustinKim/.codemix/engine/CodeMix Engine.app/Contents/Resources/app/out/vs/code/electron-main/main.js:15660:35)
+    at InstantiationService._createAndCacheServiceInstance (/Users/JustinKim/.codemix/engine/CodeMix Engine.app/Contents/Resources/app/out/vs/code/electron-main/main.js:15717:41)
+    at InstantiationService._getOrCreateServiceInstance (/Users/JustinKim/.codemix/engine/CodeMix Engine.app/Contents/Resources/app/out/vs/code/electron-main/main.js:15665:29)
+    at InstantiationService._createInstance (/Users/JustinKim/.codemix/engine/CodeMix Engine.app/Contents/Resources/app/out/vs/code/electron-main/main.js:15632:36)
+    at InstantiationService.createInstance (/Users/JustinKim/.codemix/engine/CodeMix Engine.app/Contents/Resources/app/out/vs/code/electron-main/main.js:15621:29)
+    at /Users/JustinKim/.codemix/engine/CodeMix Engine.app/Contents/Resources/app/out/vs/code/electron-main/main.js:30301:45
+    at Object.notifySuccess [as _notify] (/Users/JustinKim/.codemix/engine/CodeMix Engine.app/Contents/Resources/app/out/vs/code/electron-main/main.js:6914:59)
+    at Object.enter (/Users/JustinKim/.codemix/engine/CodeMix Engine.app/Contents/Resources/app/out/vs/code/electron-main/main.js:6596:30)
+    at Promise_ctor._run (/Users/JustinKim/.codemix/engine/CodeMix Engine.app/Contents/Resources/app/out/vs/code/electron-main/main.js:6812:29)
+    at Promise_ctor._completed (/Users/JustinKim/.codemix/engine/CodeMix Engine.app/Contents/Resources/app/out/vs/code/electron-main/main.js:6780:18)
+    at Server.<anonymous> (/Users/JustinKim/.codemix/engine/CodeMix Engine.app/Contents/Resources/app/out/vs/code/electron-main/main.js:13417:17)
+    at Object.onceWrapper (events.js:293:19)
+    at emitNone (events.js:86:13)
+    at Server.emit (events.js:188:7)
+    at emitListeningNT (net.js:1290:10)
+    at _combinedTickCallback (internal/process/next_tick.js:77:11)
+    at process._tickCallback (internal/process/next_tick.js:104:9)
+[90m[main 9:35:30 PM][0m update#ctor - updates are disabled
+
