@@ -6,11 +6,13 @@ public class tradingBananas {
 	static HashSet<String> tracker;
 
 	public static void main(String[] args) {
-
+		int[] bananaList = {};
+		System.out.println(answer(bananaList));
 	}
 
-	public static int answer(int[] banana_list) {
-		
+	public static int answer(int[] bananaList) {
+		tracker = new HashSet<>();
+		return isLoop(7, 13) ? 1 : 0;
 	}
 
 	public static boolean isLoop(int n, int m) {
