@@ -1,7 +1,7 @@
 package foobar;
 
 import java.util.ArrayList;
-import java.util.HashSet;
+import java.util.Arrays;
 import java.util.LinkedList;
 
 class GraphNoRepeatNode {
@@ -55,13 +55,15 @@ class GraphNoRepeatNode {
 public class tradingBananas {
 
 	public static void main(String[] args) {
-		int[] bananaList = { 4, 8 };
+		int[] bananaList = { 1, 7, 13, 21, 3, 19 };
 
 		System.out.println(answer(bananaList));
 
 	}
 
 	public static int answer(int[] bananaList) {
+		// sorting works
+		Arrays.sort(bananaList);
 
 		// add all possible pairings
 		GraphNoRepeatNode possGuardPairs = new GraphNoRepeatNode(bananaList.length);
@@ -77,50 +79,22 @@ public class tradingBananas {
 	}
 
 	private static boolean isLoop(int n, int m) {
-		int sum = n + m;
-		double ckSumPow2 = Math.log(sum) / Math.log(2);
-		if (n == m) {
-			return false;
-		}
-		// if sum is odd or is multiple of 2 and not 4
-		if (sum % 4 != 0) {
-			return true;
-		}
-		// if sum is power of 2 then no loop
-		if (Math.floor(ckSumPow2) == Math.ceil(ckSumPow2)) {
-			return false;
-		}
+		int gcd = gcd(n, m);
+		double sumDivGcd = Math.log(n / gcd + m / gcd) / Math.log(2);
+		boolean divlcmPow2 = Math.floor(sumDivGcd) == Math.ceil(sumDivGcd);
 
-		// simulate loop
-		HashSet<String> loopTracker = new HashSet<>();
-		while (n != m) {
-			String key = n + "," + m;
-			String keyreverse = m + "," + n;
-			double half = sum / 2;
-			int less = Math.min(n, m);
-			double ckDivPow2 = Math.log(half / less) / Math.log(2);
+		// sum of (the numbers divided by their gcd) is not a power of 2
+		// somehow this works
+		return !divlcmPow2;
+	}
 
-			// if less banana pile times a power of 2 is half then no loop
-			if (Math.floor(ckDivPow2) == Math.ceil(ckDivPow2)) {
-				return false;
-			}
-			// if you have gotten here before then loops
-			if (loopTracker.contains(key) || loopTracker.contains(keyreverse)) {
-				return true;
-			}
-			loopTracker.add(key);
-			// who wins
-			if (n > m) {
-				n = n - m;
-				m = m * 2;
-			}
-			else {
-				m = m - n;
-				n = n * 2;
-			}
+	private static int gcd(int a, int b) {
+		while (b > 0) {
+			int temp = b;
+			b = a % b; // % is remainder
+			a = temp;
 		}
-
-		return false;
+		return a;
 	}
 
 	private static int maxCountPairs(GraphNoRepeatNode possGuardPairs, int startPos) {
@@ -128,6 +102,7 @@ public class tradingBananas {
 			return 0;
 		}
 
+		// dfs graph w/o repeating nodes
 		int max = 0;
 		boolean[] occupiedPos = possGuardPairs.getOccupiedPos();
 		for (int i = startPos; i < occupiedPos.length; i++) {

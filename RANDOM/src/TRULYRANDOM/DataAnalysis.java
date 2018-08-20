@@ -4,42 +4,48 @@ import java.util.HashSet;
 
 public class DataAnalysis {
 	public static void main(String[] args) {
-		int[][] notLoop = new int[1000000][2];
-		int ct = 0;
-		for (int i = 1; i < 1000; i++) {
-			for (int j = 1; j < 1000; j++) {
-				if (!isLoop(i, j)) {
-					notLoop[ct][0] = i;
-					notLoop[ct][1] = j;
-					ct++;
-				}
+		boolean[][] data = new boolean[50][50];
+		for (int i = 1; i < data.length; i++) {
+			for (int j = 1; j < data[0].length; j++) {
+				data[i][j] = isLoop(i, j);
 			}
 		}
 
-		for (int i = 0; i < ct; i++) {
-			int n = notLoop[i][0];
-			int m = notLoop[i][1];
+		for (int i = 1; i < data.length; i++) {
+			for (int j = 1; j < data[0].length; j++) {
+				boolean loops = data[i][j];
+				// if (loops) {
+				// continue;
+				// }
 
-			// big data
-			int sum = n + m;
-			double half = sum / 2;
-			int less = Math.min(n, m);
-			double sumlog2 = Math.log(sum) / Math.log(2);
-			double multlog2 = Math.log(half / less) / Math.log(2);
-			int prod = n * m;
-			int gcd = gcd(n, m);
-			int lcm = lcm(n, m);
+				// big data
+				int sum = i + j;
+				double half = sum / 2;
+				int less = Math.min(i, j);
+				double sumlog2 = Math.log(sum) / Math.log(2);
+				double multlog2 = Math.log(half / less) / Math.log(2);
+				int prod = i * j;
+				int gcd = gcd(i, j);
+				int lcm = lcm(i, j);
+				double divlcmlog2 = Math.log(i / gcd + j / gcd) / Math.log(2);
 
-			boolean equal = n == m;
-			boolean sumPow2 = Math.floor(sumlog2) == Math.ceil(sumlog2);
-			boolean multPow2 = Math.floor(multlog2) == Math.ceil(multlog2);
+				boolean extra = false;
+				boolean equal = i == j;
+				boolean sumPow2 = Math.floor(sumlog2) == Math.ceil(sumlog2);
+				boolean multPow2 = Math.floor(multlog2) == Math.ceil(multlog2);
+				boolean divlcmPow2 = Math.floor(divlcmlog2) == Math.ceil(divlcmlog2);
 
-			if (!(equal || sumPow2 || multPow2)) {
-				System.out.print(n + " " + m);
-				System.out.print("\t\t" + sum + "\t" + equal + "\t" + sumPow2 + "\t" + multPow2);
-				System.out.print("\t" + prod + "\t" + gcd);
+				// if (!(equal || sumPow2 || multPow2)) {
+				System.out.print(i + " " + j);
+
+				System.out.print("\t" + prod + "\t" + gcd + "\t" + lcm + "\t" + loops + "\t" + divlcmPow2);
+				if (extra) {
+					System.out.print("\t\t" + sum + "\t" + equal + "\t" + sumPow2 + "\t" + multPow2);
+				}
 
 				System.out.println();
+				// }
+
 			}
 		}
 	}
