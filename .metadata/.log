@@ -11521,3 +11521,13 @@ Caused by: sun.security.provider.certpath.SunCertPathBuilderException: unable to
 	at java.security.cert.CertPathBuilder.build(CertPathBuilder.java:280)
 	at sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:382)
 	... 25 more
+!SESSION 2018-08-27 21:01:37.991 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product -keyring /Users/JustinKim/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -data /Users/JustinKim/Documents/workspace/RANDOM -product org.eclipse.epp.package.java.product -keyring /Users/JustinKim/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-08-27 21:01:41.209
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
