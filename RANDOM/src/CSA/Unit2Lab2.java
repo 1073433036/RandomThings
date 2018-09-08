@@ -25,5 +25,7 @@ public class Unit2Lab2 {
 		int p = cents;
 		System.out.printf("$%.2f consists of %d dollars, %d quarters, %d dimes, %d nickels, %d pennies", money, d, q, di,
 				n, p);
+		
+		input.close();
 	}
 }

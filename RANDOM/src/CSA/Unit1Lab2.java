@@ -32,5 +32,7 @@ public class Unit1Lab2 {
 		System.out.println("\t-----\t-----\t-----");
 		System.out.println("Total\t" + (v1 + v3 + v5) + "\t" + (v2 + v4 + v6) + "\t" + (v1 + v2 + v3 + v4 + v5 + v6));
 		System.out.println("\n\n");
+
+		input.close();
 	}
 }
