@@ -6,12 +6,14 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="%.5f" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value=" 0"/>
+			<item value="0 "/>
 			<item value="%f"/>
 			<item value="%d"/>
 			<item value="looptracker"/>
@@ -25,15 +27,13 @@
 			<item value="suite"/>
 			<item value="suite context"/>
 			<item value="mismatched input"/>
-			<item value="classdef"/>
-			<item value="class"/>
 		</list>
 		<list key="replacehistory">
+			<item value=""/>
 			<item value="%.5f"/>
 			<item value="%f"/>
 			<item value="}"/>
 			<item value="{"/>
-			<item value=""/>
 			<item value="(Python3Parser."/>
 			<item value="AltPython"/>
 			<item value="nums"/>
