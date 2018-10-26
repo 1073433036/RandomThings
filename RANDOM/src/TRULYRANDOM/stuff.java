@@ -6,15 +6,27 @@ import java.util.Queue;
 
 public class stuff
 {
-	private static class pos
-	{
+	private static class pos implements Comparable<pos> {
 		int x;
 		int y;
 
-		public pos(int x, int y)
-		{
+		public pos(int x, int y) {
 			this.x = x;
 			this.y = y;
+		}
+
+		@Override
+		public int compareTo(pos o) {
+			if (x > o.x) {
+				return 1;
+			}
+			else if (x < o.x) {
+				return -1;
+			}
+			else {
+				return y - o.y;
+			}
+
 		}
 	}
 

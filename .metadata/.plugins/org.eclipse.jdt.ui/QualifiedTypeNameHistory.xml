@@ -42,7 +42,6 @@
 <fullyQualifiedTypeName name="Python3Parser.File_inputContext"/>
 <fullyQualifiedTypeName name="org.antlr.v4.runtime.tree.ParseTreeWalker"/>
 <fullyQualifiedTypeName name="org.antlr.v4.runtime.ANTLRErrorStrategy"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="scam.mazebreakwall.state"/>
 <fullyQualifiedTypeName name="java.util.PriorityQueue"/>
 <fullyQualifiedTypeName name="java.util.Queue"/>
@@ -52,12 +51,13 @@
 <fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="CSA.Unit6Lab3_ArrayTools"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.io.File"/>
 <fullyQualifiedTypeName name="javax.sound.sampled.AudioSystem"/>
 <fullyQualifiedTypeName name="javax.sound.sampled.AudioFormat"/>
 <fullyQualifiedTypeName name="javax.sound.sampled.AudioFormat.Encoding"/>
 <fullyQualifiedTypeName name="javax.sound.sampled.DataLine"/>
 <fullyQualifiedTypeName name="javax.sound.sampled.DataLine.Info"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>
