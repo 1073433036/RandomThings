@@ -14,9 +14,8 @@ public class ccski {
 		BufferedReader f = new BufferedReader(new FileReader("ccski.in"));
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("ccski.out")));
 		StringTokenizer st = new StringTokenizer(f.readLine());
-
-		int i1 = Integer.parseInt(st.nextToken());
-		int i2 = Integer.parseInt(st.nextToken());
+		
+		
 
 		out.println(i1 + i2);
 		out.close();
