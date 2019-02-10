@@ -1,5 +1,4 @@
-
-//package usacoFinished;
+package usaco.NO;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
