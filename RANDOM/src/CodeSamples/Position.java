@@ -21,11 +21,8 @@ class PositionComparable implements Comparable<PositionComparable> {
 
 	@Override
 	public int compareTo(PositionComparable o) {
-		if (x > o.x) {
-			return 1;
-		}
-		else if (x < o.x) {
-			return -1;
+		if (x != o.x) {
+			return x - o.x;
 		}
 		else {
 			return y - o.y;
