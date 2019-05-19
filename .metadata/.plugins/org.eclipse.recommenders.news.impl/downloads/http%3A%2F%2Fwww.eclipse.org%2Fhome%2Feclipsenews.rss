@@ -10,6 +10,54 @@
       <link>http://www.eclipse.org</link>
     </image>
     <item>
+      <title><![CDATA[Eclipse Foundation Launches openMobility Working Group]]></title>
+      <link><![CDATA[https://www.globenewswire.com/news-release/2019/05/13/1822364/0/en/Eclipse-Foundation-Launches-openMobility-Working-Group.html]]></link>
+      <description><![CDATA[Today we announced the launch of the openMobility Working Group that will focus on open and shared collaboration around one of the major issues in urban planning around autonomous vehicles and future transportation requirements.]]></description>
+      <pubDate>Mon, 13 May 2019 17:30:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
+      <title><![CDATA[New Eclipse Foundation Community Survey of Java Developers Shows Cloud Native Adoption Accelerating Dramatically with Jakarta EE]]></title>
+      <link><![CDATA[https://www.globenewswire.com/news-release/2019/05/09/1820952/0/en/New-Eclipse-Foundation-Community-Survey-of-Java-Developers-Shows-Cloud-Native-Adoption-Accelerating-Dramatically-with-Jakarta-EE.html]]></link>
+      <description><![CDATA[Eclipse Foundation enterprise Java survey shows cloud deployments increasing over 2018 findings with 62% of Java developers building cloud native architectures now or within the year]]></description>
+      <pubDate>Thu, 09 May 2019 14:00:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+     <item>
+      <title><![CDATA[The Cloud Native Imperative - Results from the 2019 Jakarta EE Developer Survey]]></title>
+      <link><![CDATA[https://blogs.eclipse.org/post/mike-milinkovich/cloud-native-imperative-%E2%80%94-results-2019-jakarta-ee-developer-survey]]></link>
+      <description><![CDATA[The results of the 2019 Jakarta EE Developer Survey are out. Almost 1,800 Java developers from around the world have spoken.]]></description>
+      <pubDate>Fri, 10 May 2019 14:00:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
+      <title><![CDATA[Frequently Asked Questions About Jakarta EE 8]]></title>
+      <link><![CDATA[https://blogs.eclipse.org/post/mike-milinkovich/frequently-asked-questions-about-jakarta-ee-8]]></link>
+      <description><![CDATA[Have questions about Jakarta EE 8? Check out Mike Milinkovich's newest FAQ blog!]]></description>
+      <pubDate>Wed, 08 May 2019 10:00:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+     <item>
+      <title><![CDATA[Eclipse Contributor Agreement 3.0]]></title>
+      <link><![CDATA[https://blogs.eclipse.org/post/wayne-beaton/eclipse-contributor-agreement-30]]></link>
+      <description><![CDATA[The Eclipse Foundation's IP Team has been working hard to get the various agreements that we maintain between the Eclipse Foundation and community updated.]]></description>
+      <pubDate>Wed, 08 May 2019 10:00:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
+      <title><![CDATA[Update on Jakarta EE Rights to Java Trademarks]]></title>
+      <link><![CDATA[https://blogs.eclipse.org/post/mike-milinkovich/update-jakarta-ee-rights-java-trademarks]]></link>
+      <description><![CDATA[Summary of progress to date and implications of the agreement between Eclipse and Oracle on Jakarta EE and use of Java trademarks and the javax namespace.]]></description>
+      <pubDate>Fri, 03 May 2019 15:00:00 EST</pubDate>
+      <category>news</category>
+      <pressrelease>0</pressrelease>
+    </item>
+    <item>
       <title><![CDATA[Eclipse Foundation on the move!]]></title>
       <link><![CDATA[https://blogs.eclipse.org/post/mike-milinkovich/eclipse-foundation-move]]></link>
       <description><![CDATA[After 15 years at 102 Centrepointe Drive in Ottawa, the Eclipse Foundation is on the move!]]></description>
