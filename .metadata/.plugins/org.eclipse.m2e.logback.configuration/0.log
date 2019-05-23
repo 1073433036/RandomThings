@@ -249,3 +249,7 @@
 2019-05-09 17:52:49,162 [Worker-7] WARN  org.eclipse.jgit.util.FS - null
 2019-05-17 17:46:05,070 [Worker-6] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2019-05-17 17:46:07,026 [Worker-2] WARN  org.eclipse.jgit.util.FS - null
+2019-05-21 15:09:06,683 [Worker-8] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-05-21 15:09:09,210 [Worker-12] WARN  org.eclipse.jgit.util.FS - null
+2019-05-21 16:36:29,337 [Worker-0] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-05-21 16:36:31,183 [Worker-5] WARN  org.eclipse.jgit.util.FS - null

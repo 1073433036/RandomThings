@@ -3,8 +3,45 @@ package CodeSamples;
 import java.util.ArrayList;
 
 class Sorts {
-	public static void shellSort(int[] array) {
+	public static void cycleSort(int[] array) {
+		int writes=0;
+		for(int cycle=0;cycle<array.length-2;cycle++) {
+			int item=array[cycle];
+			
+			int pos=cycle;
+			for(int i=cycle+1;i<n;i++)
+		}
+	}
+	
+	public static void combSort(int[] array) {
+		for (int gap = array.length * 10 / 13; gap > 1; gap = (int) Math.max(gap / 1.3, 1)) {
+			boolean swapped = false;
+			for (int j = 0; j < array.length - gap; j++) {
+				if (array[j] > array[j + gap]) {
+					int temp = array[j];
+					array[j] = array[j + gap];
+					array[j + gap] = temp;
+					swapped = true;
+				}
+			}
 
+			if (!swapped) {
+				break;
+			}
+		}
+	}
+
+	public static void shellSort(int[] array) {
+		for (int gap = array.length / 2; gap > 0; gap /= 2) {
+			for (int i = gap; i < array.length; i++) {
+				int temp = array[i];
+				int j;
+				for (j = i; j >= gap && array[j - gap] > temp; j -= gap) {
+					array[j] = array[j - gap];
+				}
+				array[j] = temp;
+			}
+		}
 	}
 
 	public static void bucketSort(double[] array) {// 0..1
@@ -208,7 +245,7 @@ class Sorts {
 				}
 			}
 
-			if (swapped) {
+			if (!swapped) {
 				break;
 			}
 		}
