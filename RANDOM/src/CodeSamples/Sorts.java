@@ -4,15 +4,51 @@ import java.util.ArrayList;
 
 class Sorts {
 	public static void cycleSort(int[] array) {
-		int writes=0;
-		for(int cycle=0;cycle<array.length-2;cycle++) {
-			int item=array[cycle];
+		for (int cycle = 0; cycle <= array.length - 2; cycle++) {
+			int item = array[cycle];
+
+			int pos = cycle;
+			for (int i = cycle + 1; i < array.length; i++) {
+				if (array[i] < item) {
+					pos++;
+				}
+			}
+
+			if (pos == cycle) {
+				continue;
+			}
+
+			while (item == array[pos]) {
+				pos++;
+			}
+
+			if (pos != cycle) {
+				int temp = array[cycle];
+				array[cycle] = array[pos];
+				array[pos] = temp;
+			}
 			
-			int pos=cycle;
-			for(int i=cycle+1;i<n;i++)
+			while(pos!=cycle) {
+				pos=cycle;
+				for(int i=cycle+1;i<array.length;i++) {
+					if(array[i]<item) {
+						pos++;
+					}
+				}
+				
+				while(item==array[pos]) {
+					pos++;
+				}
+				
+				if(item!=array[pos]) {
+					int temp = array[cycle];
+					array[cycle] = array[pos];
+					array[pos] = temp;
+				}
+			}
 		}
 	}
-	
+
 	public static void combSort(int[] array) {
 		for (int gap = array.length * 10 / 13; gap > 1; gap = (int) Math.max(gap / 1.3, 1)) {
 			boolean swapped = false;
