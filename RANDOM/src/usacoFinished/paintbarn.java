@@ -1,11 +1,12 @@
-//package usacoFinished;
 
- import java.util.StringTokenizer;
- import java.io.BufferedReader;
- import java.io.PrintWriter;
- import java.io.BufferedWriter;
- import java.io.FileReader;
- import java.io.FileWriter;
+// package usacoFinished;
+
+import java.util.StringTokenizer;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
 
 import java.io.IOException;
 
@@ -19,7 +20,7 @@ public class paintbarn {
 		int n = Integer.parseInt(st.nextToken());
 		int k = Integer.parseInt(st.nextToken());
 		for (int i = 0; i < n; i++) {
-			st=new StringTokenizer(f.readLine());
+			st = new StringTokenizer(f.readLine());
 			int x1 = Integer.parseInt(st.nextToken());
 			int y1 = Integer.parseInt(st.nextToken());
 			int x2 = Integer.parseInt(st.nextToken());
@@ -33,18 +34,18 @@ public class paintbarn {
 
 		for (int i = 0; i < barn.length; i++) {
 			for (int j = 1; j < barn[0].length; j++) {
-				barn[i][j]+=barn[i][j-1];
+				barn[i][j] += barn[i][j - 1];
 			}
 		}
 		for (int i = 1; i < barn.length; i++) {
 			for (int j = 0; j < barn[0].length; j++) {
-				barn[i][j]+=barn[i-1][j];
+				barn[i][j] += barn[i - 1][j];
 			}
 		}
-		int area=0;
+		int area = 0;
 		for (int i = 0; i < barn.length; i++) {
 			for (int j = 0; j < barn[0].length; j++) {
-				area+=barn[i][j]==k?1:0;
+				area += barn[i][j] == k ? 1 : 0;
 			}
 		}
 

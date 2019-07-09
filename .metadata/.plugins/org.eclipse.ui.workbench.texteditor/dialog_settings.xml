@@ -6,12 +6,17 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="//" key="selection"/>
+		<item value="sort" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="sort"/>
+			<item value="sort nearly sorted"/>
+			<item value="list"/>
+			<item value="int target, int[] list"/>
+			<item value="public static"/>
 			<item value="grass"/>
 			<item value="2"/>
 			<item value="Date1"/>
@@ -22,13 +27,10 @@
 			<item value="%f"/>
 			<item value="%d"/>
 			<item value="looptracker"/>
-			<item value="damn"/>
-			<item value="]"/>
-			<item value="["/>
-			<item value="error"/>
-			<item value="// TODO Auto-generated method stub"/>
 		</list>
 		<list key="replacehistory">
+			<item value="array"/>
+			<item value="int[] array, int target"/>
 			<item value="Date"/>
 			<item value="i"/>
 			<item value=""/>
@@ -42,15 +44,13 @@
 			<item value="3"/>
 			<item value="2"/>
 			<item value="1"/>
-			<item value="0"/>
-			<item value=" "/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="290" key="DIALOG_WIDTH"/>
 		<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
 		<item value="409" key="DIALOG_HEIGHT"/>
-		<item value="439" key="DIALOG_X_ORIGIN"/>
-		<item value="50" key="DIALOG_Y_ORIGIN"/>
+		<item value="990" key="DIALOG_X_ORIGIN"/>
+		<item value="40" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

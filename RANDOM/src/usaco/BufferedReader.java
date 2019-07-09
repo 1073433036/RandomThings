@@ -1,18 +1,14 @@
 package usaco;
 
-public class BufferedReader
-{
-	public BufferedReader(FileReader str)
-	{
+public class BufferedReader {
+	public BufferedReader(FileReader str) {
 	}
 
-	public String readLine()
-	{
+	public String readLine() {
 		return "";
 	}
 
-	public void close()
-	{
+	public void close() {
 		StringTokenizer.close();
 	}
 }

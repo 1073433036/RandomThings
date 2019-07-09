@@ -1,8 +1,6 @@
 package usaco;
 
-public class FileReader
-{
-	public FileReader(String str)
-	{
+public class FileReader {
+	public FileReader(String str) {
 	}
 }

@@ -1,3 +1,4 @@
+
 // package usacoFinished;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,10 +8,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
-public class square
-{
-	public static void main(String[] args) throws IOException
-	{
+public class square {
+	public static void main(String[] args) throws IOException {
 		BufferedReader f = new BufferedReader(new FileReader("square.in"));
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("square.out")));
 		StringTokenizer st = new StringTokenizer(f.readLine());
@@ -26,8 +25,7 @@ public class square
 		int rx22 = Integer.parseInt(st.nextToken());
 		int ry22 = Integer.parseInt(st.nextToken());
 
-		int[] rxs =
-			{ rx11, rx12, rx21, rx22 };
+		int[] rxs = { rx11, rx12, rx21, rx22 };
 
 		int maxx = 0;
 		for (int i = 0; i < 4; i++)
@@ -39,8 +37,7 @@ public class square
 			if (rxs[i] < minx)
 				minx = rxs[i];
 
-		int[] rys =
-			{ ry11, ry12, ry21, ry22 };
+		int[] rys = { ry11, ry12, ry21, ry22 };
 
 		int maxy = 0;
 		for (int i = 0; i < 4; i++)

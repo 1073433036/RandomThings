@@ -8,20 +8,15 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
-public class blocks
-{
-	public static String mergeStrings(String a, String b)
-	{
+public class blocks {
+	public static String mergeStrings(String a, String b) {
 		String newstring = b;
 		boolean[] used = new boolean[b.length()];
 		for (int i = 0; i < b.length(); i++)
 			used[i] = false;
-		for (int i = 0; i < a.length(); i++)
-		{
-			for (int j = 0; j < b.length(); j++)
-			{
-				if (a.substring(i, i + 1).equals(b.substring(j, j + 1)) && !used[j])
-				{
+		for (int i = 0; i < a.length(); i++) {
+			for (int j = 0; j < b.length(); j++) {
+				if (a.substring(i, i + 1).equals(b.substring(j, j + 1)) && !used[j]) {
 					used[j] = true;
 					j = b.length() + 123;
 				}
@@ -32,10 +27,8 @@ public class blocks
 		return newstring;
 	}
 
-	public static int alphabetplace(String a)
-	{
-		switch (a)
-		{
+	public static int alphabetplace(String a) {
+		switch (a) {
 			case "a":
 				return 1;
 			case "b":
@@ -94,8 +87,7 @@ public class blocks
 		}
 	}
 
-	public static void main(String[] args) throws IOException
-	{
+	public static void main(String[] args) throws IOException {
 		BufferedReader f = new BufferedReader(new FileReader("blocks.in"));
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("blocks.out")));
 		StringTokenizer st = new StringTokenizer(f.readLine());
@@ -104,8 +96,7 @@ public class blocks
 
 		String[] stringlistup = new String[n];
 		String[] stringlistdown = new String[n];
-		for (int i = 0; i < n; i++)
-		{
+		for (int i = 0; i < n; i++) {
 			st = new StringTokenizer(f.readLine());
 			stringlistup[i] = st.nextToken();
 			stringlistdown[i] = st.nextToken();
@@ -115,20 +106,17 @@ public class blocks
 		for (int i = 0; i < 26; i++)
 			alphabetcount[i] = 0;
 
-		for (int i = 0; i < n; i++)
-		{
+		for (int i = 0; i < n; i++) {
 			String down = stringlistdown[i];
 			String up = stringlistup[i];
 			String newstring;
 			String max;
 			String min;
-			if (up.length() > down.length())
-			{
+			if (up.length() > down.length()) {
 				min = down;
 				max = up;
 			}
-			else
-			{
+			else {
 				min = up;
 				max = down;
 			}

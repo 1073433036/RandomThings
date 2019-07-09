@@ -1,10 +1,11 @@
-//package usacoFinished;
- import java.util.StringTokenizer;
- import java.io.BufferedReader;
- import java.io.PrintWriter;
- import java.io.BufferedWriter;
- import java.io.FileReader;
- import java.io.FileWriter;
+
+// package usacoFinished;
+import java.util.StringTokenizer;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
 
 import java.io.IOException;
 
@@ -29,15 +30,15 @@ public class bcount {
 		}
 
 		for (int i = 0; i < q; i++) {
-			st=new StringTokenizer(f.readLine());
-			int begin=Integer.parseInt(st.nextToken());
-			int end=Integer.parseInt(st.nextToken());
-			out.print(cows[end][0]-cows[begin-1][0]+" ");
-			out.print(cows[end][1]-cows[begin-1][1]+" ");
-			out.println(cows[end][2]-cows[begin-1][2]);
-			
+			st = new StringTokenizer(f.readLine());
+			int begin = Integer.parseInt(st.nextToken());
+			int end = Integer.parseInt(st.nextToken());
+			out.print(cows[end][0] - cows[begin - 1][0] + " ");
+			out.print(cows[end][1] - cows[begin - 1][1] + " ");
+			out.println(cows[end][2] - cows[begin - 1][2]);
+
 		}
-		
+
 		out.close();
 		f.close();
 	}

@@ -1,6 +1,7 @@
-//package usacoFinished;
 
- import java.io.BufferedReader;
+// package usacoFinished;
+
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
 import java.io.FileWriter;
@@ -8,10 +9,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
-public class moocast
-{
-	public static void main(String[] args) throws IOException
-	{
+public class moocast {
+	public static void main(String[] args) throws IOException {
 		BufferedReader f = new BufferedReader(new FileReader("moocast.in"));
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("moocast.out")));
 		StringTokenizer st = new StringTokenizer(f.readLine());
@@ -20,8 +19,7 @@ public class moocast
 		int[] x = new int[numcows];
 		int[] y = new int[numcows];
 		int[] power = new int[numcows];
-		for (int i = 0; i < numcows; i++)
-		{
+		for (int i = 0; i < numcows; i++) {
 			st = new StringTokenizer(f.readLine());
 			x[i] = Integer.parseInt(st.nextToken());
 			y[i] = Integer.parseInt(st.nextToken());
@@ -34,8 +32,7 @@ public class moocast
 
 		int max = 1;
 		boolean[] used;
-		for (int i = 0; i < numcows; i++)
-		{
+		for (int i = 0; i < numcows; i++) {
 			used = new boolean[numcows];
 			max = Math.max(max, dfs(i, cowsreach, used));
 		}
@@ -45,8 +42,7 @@ public class moocast
 		f.close();
 	}
 
-	public static int dfs(int curr, boolean[][] cowsreach, boolean[] used)
-	{
+	public static int dfs(int curr, boolean[][] cowsreach, boolean[] used) {
 		used[curr] = true;
 		int count = 1;
 		for (int i = 0; i < cowsreach.length; i++)

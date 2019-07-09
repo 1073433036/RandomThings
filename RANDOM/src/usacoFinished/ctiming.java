@@ -1,3 +1,4 @@
+
 // package usacoFinished;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -7,10 +8,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
-public class ctiming
-{
-	public static void main(String[] args) throws IOException
-	{
+public class ctiming {
+	public static void main(String[] args) throws IOException {
 		BufferedReader f = new BufferedReader(new FileReader("ctiming.in"));
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("ctiming.out")));
 		StringTokenizer st = new StringTokenizer(f.readLine());

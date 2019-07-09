@@ -3,6 +3,58 @@ package CodeSamples;
 import java.util.ArrayList;
 
 class Sorts {
+	private static class Node {
+		Node next;
+		int data;
+
+		public Node(Node next, int data) {
+			this.next = next;
+			this.data = data;
+		}
+	}
+
+	public static Node sortedMerge(Node left, Node right) {
+		Node result = null;
+		if (left == null) {
+			return right;
+		}
+		if (right == null) {
+			return left;
+		}
+		if (left.data <= right.data) {
+			result = left;
+			result.next = sortedMerge(left.next, right);
+		}
+		else {
+			result = right;
+			result.next = sortedMerge(left, right.next);
+		}
+
+		return result;
+	}
+
+	public static Node mergeSortLinkedList(Node head) {
+		if (head == null || head.next == null) {
+			return head;
+		}
+
+		Node fastptr = head.next;
+		Node middle = head;
+		while (fastptr != null) {
+			fastptr = fastptr.next;
+			if (fastptr != null) {
+				middle = middle.next;
+				fastptr = fastptr.next;
+			}
+		}
+		Node middleNext = middle.next;
+		middle.next = null;
+		Node left = mergeSortLinkedList(head);
+		Node right = mergeSortLinkedList(middleNext);
+		Node sorted = sortedMerge(left, right);
+		return sorted;
+	}
+
 	public static void cycleSort(int[] array) {
 		for (int cycle = 0; cycle <= array.length - 2; cycle++) {
 			int item = array[cycle];
@@ -27,20 +79,20 @@ class Sorts {
 				array[cycle] = array[pos];
 				array[pos] = temp;
 			}
-			
-			while(pos!=cycle) {
-				pos=cycle;
-				for(int i=cycle+1;i<array.length;i++) {
-					if(array[i]<item) {
+
+			while (pos != cycle) {
+				pos = cycle;
+				for (int i = cycle + 1; i < array.length; i++) {
+					if (array[i] < item) {
 						pos++;
 					}
 				}
-				
-				while(item==array[pos]) {
+
+				while (item == array[pos]) {
 					pos++;
 				}
-				
-				if(item!=array[pos]) {
+
+				if (item != array[pos]) {
 					int temp = array[cycle];
 					array[cycle] = array[pos];
 					array[pos] = temp;
@@ -80,7 +132,7 @@ class Sorts {
 		}
 	}
 
-	public static void bucketSort(double[] array) {// 0..1
+	public static void bucketSort(double[] array) {
 		ArrayList<Double>[] buckets = new ArrayList[array.length];
 		for (int i = 0; i < array.length; i++) {
 			if (buckets[(int) (array.length * array[i])] == null) {
@@ -179,6 +231,95 @@ class Sorts {
 
 			quickSort(array, low, i);
 			quickSort(array, i + 1, high);
+		}
+	}
+
+	public static Node quickSortSingleLinkedList(Node head, Node end) {
+		if (head == null || head == end) {
+			return head;
+		}
+
+		Node newHead = null, newEnd = null;
+		Node pivot = end;
+		Node prev = null, cur = head, tail = pivot;
+		while (cur != pivot) {
+			if (cur.data < pivot.data) {
+				if (newHead == null) {
+					newHead = cur;
+				}
+
+				prev = cur;
+				cur = cur.next;
+			}
+			else {
+				if (prev != null) {
+					prev.next = cur.next;
+				}
+				Node temp = cur.next;
+				cur.next = null;
+				tail.next = cur;
+				tail = cur;
+				cur = temp;
+			}
+		}
+
+		if (newHead == null) {
+			newHead = pivot;
+		}
+		newEnd = tail;
+
+		if (newHead != pivot) {
+			Node temp = newHead;
+			while (temp.next != pivot) {
+				temp = temp.next;
+			}
+			temp.next = null;
+
+			newHead = quickSortSingleLinkedList(newHead, temp);
+
+			while (temp != null && temp.next != null) {
+				temp = temp.next;
+			}
+
+			temp.next = pivot;
+		}
+		pivot.next = quickSortSingleLinkedList(pivot.next, newEnd);
+		return newHead;
+	}
+
+	public static void iterativeQuickSort(int[] array) {
+		int[] stack = new int[array.length - 1];
+
+		int top = -1;
+		stack[++top] = 0;
+		stack[++top] = array.length - 1;
+
+		while (top >= 0) {
+			int e = stack[top--];
+			int s = stack[top--];
+			int pivot = array[e];
+			int i = s - 1;
+			for (int j = 1; j <= e - 1; j++) {
+				if (array[j] <= pivot) {
+					i++;
+					int temp = array[i];
+					array[i] = array[j];
+					array[j] = temp;
+				}
+			}
+			int temp = array[i + 1];
+			array[i + 1] = array[e];
+			array[e] = temp;
+
+			int p = i + 1;
+			if (p - 1 > s) {
+				stack[++top] = s;
+				stack[++top] = p - 1;
+			}
+			if (p + 1 < e) {
+				stack[++top] = p + 1;
+				stack[++top] = e;
+			}
 		}
 	}
 

@@ -1,0 +1,12 @@
+If you use the same key to encrypt two messages you must 
+ensure that the resulting ciphertexts are different.
+
+If you use the same key to encrypt two messages you must 
+ensure that the resulting ciphertexts are different.
+
+If you use the same key to encrypt two messages you must 
+ensure that the resulting ciphertexts are different.
+
+If you use the same key to encrypt two messages you must 
+ensure that the resulting ciphertexts are different.
+

@@ -1,17 +1,21 @@
 package CodeSamples;
 
-class BinarySearch {
-	// Arrays.binarySearch(list, target);
+/*
+ * search sorted array in log(N)
+ */
 
-	public static int binSearchNoDuplicates(int target, int[] list) {
+class BinarySearch {
+	// Arrays.binarySearch(array, target);
+
+	public static int binSearchNoDuplicates(int[] array, int target) {
 		int low = 0;
-		int high = list.length;
+		int high = array.length;
 		while (low <= high) {
 			int mid = (low + high) / 2;
-			if (target > list[mid]) {
+			if (target > array[mid]) {
 				low = mid + 1;
 			}
-			else if (target < list[mid]) {
+			else if (target < array[mid]) {
 				high = mid - 1;
 			}
 			else {
@@ -22,19 +26,19 @@ class BinarySearch {
 		return -1;
 	}
 
-	public static int binSearchFirstOccurrence(int target, int[] list) {
+	public static int binSearchFirstOccurrence(int[] array, int target) {
 		int low = 0;
-		int high = list.length;
+		int high = array.length;
 		while (low <= high) {
 			int mid = (low + high) / 2;
-			if (target > list[mid]) {
+			if (target > array[mid]) {
 				low = mid + 1;
 			}
-			else if (target < list[mid]) {
+			else if (target < array[mid]) {
 				high = mid - 1;
 			}
 			else {
-				if (list[mid - 1] != target) {
+				if (mid == 0 || array[mid - 1] != target) {
 					return mid;
 				}
 				else {
@@ -43,18 +47,18 @@ class BinarySearch {
 			}
 		}
 
-		return list[low] == target ? low : -1;
+		return array[low] == target ? low : -1;
 	}
 
-	public static int binSearchUniformlyDistributed(int target, int[] list) {
+	public static int binSearchUniformlyDistributed(int[] array, int target) {
 		int low = 0;
-		int high = list.length;
+		int high = array.length;
 		while (low <= high) {
-			int weightedmid = low + (high - low) / (list[high] - list[low]) * (target - list[low]);
-			if (list[weightedmid] < target) {
+			int weightedmid = low + (high - low) / (array[high] - array[low]) * (target - array[low]);
+			if (array[weightedmid] < target) {
 				high = weightedmid - 1;
 			}
-			else if (list[weightedmid] > target) {
+			else if (array[weightedmid] > target) {
 				low = weightedmid + 1;
 			}
 			else {
@@ -65,25 +69,25 @@ class BinarySearch {
 		return -1;
 	}
 
-	public static int exponentialBinSearch(int target, int[] list) {
-		if (list[0] == target) {
+	public static int exponentialBinSearch(int[] array, int target) {
+		if (array[0] == target) {
 			return 0;
 		}
 
-		int right = 1;
-		while (right < list.length && list[right] < target) {
-			right *= 2;
+		int high = 1;
+		while (high < array.length && array[high] < target) {
+			high *= 2;
 		}
 
-		int left = right / 2;
-		right = Math.min(right, list.length);
-		while (left <= right) {
-			int mid = (left + right) / 2;
-			if (list[mid] < target) {
-				left = mid + 1;
+		int low = high / 2;
+		high = Math.min(high, array.length);
+		while (low <= high) {
+			int mid = (low + high) / 2;
+			if (array[mid] < target) {
+				low = mid + 1;
 			}
-			else if (list[mid] > target) {
-				right = mid - 1;
+			else if (array[mid] > target) {
+				high = mid - 1;
 			}
 			else {
 				return mid;

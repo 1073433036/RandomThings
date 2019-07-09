@@ -1,3 +1,4 @@
+
 // package usacoFinished;
 
 import java.io.BufferedReader;
@@ -8,10 +9,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
-public class reststops
-{
-	public static void main(String[] args) throws IOException
-	{
+public class reststops {
+	public static void main(String[] args) throws IOException {
 		BufferedReader f = new BufferedReader(new FileReader("reststops.in"));
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("reststops.out")));
 		StringTokenizer st = new StringTokenizer(f.readLine());
@@ -20,8 +19,7 @@ public class reststops
 		int[] taste = new int[numStops];
 		int[] time = new int[numStops];
 		int prevStop = 0;
-		for (int i = 0; i < numStops; i++)
-		{
+		for (int i = 0; i < numStops; i++) {
 			st = new StringTokenizer(f.readLine());
 			int stopDist = Integer.parseInt(st.nextToken());
 			time[i] = (stopDist - prevStop) * speedDiff;
@@ -32,10 +30,8 @@ public class reststops
 		int max = taste[numStops - 1];
 		long total = 0;
 		long temptotal = 0;
-		for (int i = numStops - 1; i >= 0; i--)
-		{
-			if (taste[i] > max)
-			{
+		for (int i = numStops - 1; i >= 0; i--) {
+			if (taste[i] > max) {
 				total += temptotal * max;
 				temptotal = 0;
 				max = taste[i];

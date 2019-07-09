@@ -10,12 +10,10 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class haybales
-{
+public class haybales {
 	public static int[] haybales;
 
-	public static void main(String[] args) throws IOException
-	{
+	public static void main(String[] args) throws IOException {
 		BufferedReader f = new BufferedReader(new FileReader("haybales.in"));
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("haybales.out")));
 		StringTokenizer st = new StringTokenizer(f.readLine());
@@ -24,8 +22,7 @@ public class haybales
 		haybales = new int[numhaybales];
 		st = new StringTokenizer(f.readLine());
 		int max = 0, min = 100000000;
-		for (int i = 0; i < numhaybales; i++)
-		{
+		for (int i = 0; i < numhaybales; i++) {
 			haybales[i] = Integer.parseInt(st.nextToken());
 			if (haybales[i] > max)
 				max = haybales[i];
@@ -35,8 +32,7 @@ public class haybales
 
 		Arrays.sort(haybales);
 
-		for (int i = 0; i < numqueries; i++)
-		{
+		for (int i = 0; i < numqueries; i++) {
 			st = new StringTokenizer(f.readLine());
 			int start = Integer.parseInt(st.nextToken());
 			int end = Integer.parseInt(st.nextToken());
@@ -50,11 +46,9 @@ public class haybales
 		f.close();
 	}
 
-	public static int solve(int start, int end)
-	{
+	public static int solve(int start, int end) {
 		int s1 = 0, e1 = haybales.length - 1, curr1 = haybales.length / 2;
-		while (!((curr1 == 0 || haybales[curr1 - 1] < start) && haybales[curr1] >= start))
-		{
+		while (!((curr1 == 0 || haybales[curr1 - 1] < start) && haybales[curr1] >= start)) {
 			if (start > haybales[curr1])
 				s1 = curr1;
 			else
@@ -63,8 +57,7 @@ public class haybales
 		}
 
 		int s2 = 0, e2 = haybales.length - 1, curr2 = haybales.length / 2;
-		while (!(haybales[curr2] <= end && (curr2 == haybales.length - 1 || haybales[curr2 + 1] > end)))
-		{
+		while (!(haybales[curr2] <= end && (curr2 == haybales.length - 1 || haybales[curr2 + 1] > end))) {
 			if (end < haybales[curr2])
 				e2 = curr2;
 			else

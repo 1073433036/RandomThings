@@ -1,4 +1,5 @@
-//package usacoFinished;
+
+// package usacoFinished;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.FileReader;
@@ -9,18 +10,15 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class moosick
-{
-	public static void main(String[] args) throws IOException
-	{
+public class moosick {
+	public static void main(String[] args) throws IOException {
 		BufferedReader f = new BufferedReader(new FileReader("moosick.in"));
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("moosick.out")));
 		StringTokenizer st = new StringTokenizer(f.readLine());
 
 		int notecount = Integer.parseInt(st.nextToken());
 		int[] notes = new int[notecount];
-		for (int i = 0; i < notecount; i++)
-		{
+		for (int i = 0; i < notecount; i++) {
 			st = new StringTokenizer(f.readLine());
 			notes[i] = Integer.parseInt(st.nextToken());
 		}
@@ -28,8 +26,7 @@ public class moosick
 		st = new StringTokenizer(f.readLine());
 		int seventh = Integer.parseInt(st.nextToken());
 		int[] chord = new int[seventh];
-		for (int i = 0; i < seventh; i++)
-		{
+		for (int i = 0; i < seventh; i++) {
 			st = new StringTokenizer(f.readLine());
 			chord[i] = Integer.parseInt(st.nextToken());
 		}
@@ -37,8 +34,7 @@ public class moosick
 		Arrays.sort(chord);
 
 		ArrayList<Integer> count = new ArrayList<>();
-		for (int i = 0; i < notecount - seventh + 1; i++)
-		{
+		for (int i = 0; i < notecount - seventh + 1; i++) {
 			int[] current = new int[seventh];
 			for (int j = 0; j < seventh; j++)
 				current[j] = notes[i + j];
@@ -48,8 +44,7 @@ public class moosick
 			int same = current[0] - chord[0];
 			boolean flag = true;
 			for (int j = 1; j < seventh; j++)
-				if (same != current[j] - chord[j])
-				{
+				if (same != current[j] - chord[j]) {
 					flag = false;
 					break;
 				}

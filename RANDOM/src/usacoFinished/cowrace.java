@@ -1,3 +1,4 @@
+
 // package usacoFinished;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -8,10 +9,8 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.StringTokenizer;
 
-public class cowrace
-{
-	public static void main(String[] args) throws IOException
-	{
+public class cowrace {
+	public static void main(String[] args) throws IOException {
 		BufferedReader f = new BufferedReader(new FileReader("cowrace.in"));
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("cowrace.out")));
 		StringTokenizer st = new StringTokenizer(f.readLine());
@@ -21,8 +20,7 @@ public class cowrace
 
 		ArrayList<Integer> bdistance = new ArrayList<>();
 		ArrayList<Integer> btime = new ArrayList<>();
-		for (int i = 0; i < bess; i++)
-		{
+		for (int i = 0; i < bess; i++) {
 			st = new StringTokenizer(f.readLine());
 			bdistance.add(Integer.parseInt(st.nextToken()));
 			btime.add(Integer.parseInt(st.nextToken()));
@@ -30,8 +28,7 @@ public class cowrace
 
 		ArrayList<Integer> edistance = new ArrayList<>();
 		ArrayList<Integer> etime = new ArrayList<>();
-		for (int i = 0; i < el; i++)
-		{
+		for (int i = 0; i < el; i++) {
 			st = new StringTokenizer(f.readLine());
 			edistance.add(Integer.parseInt(st.nextToken()));
 			etime.add(Integer.parseInt(st.nextToken()));
@@ -40,8 +37,7 @@ public class cowrace
 		int distahead = 0;
 		int count = 0;
 		boolean first = true;
-		while (!bdistance.isEmpty() && !edistance.isEmpty())
-		{
+		while (!bdistance.isEmpty() && !edistance.isEmpty()) {
 			int et = etime.get(0);
 			int ed = edistance.get(0);
 			int bt = btime.get(0);
@@ -52,8 +48,7 @@ public class cowrace
 			etime.remove(0);
 			edistance.remove(0);
 
-			if (et > bt)
-			{
+			if (et > bt) {
 				etime.add(0, et - bt);
 				edistance.add(0, ed);
 				int before = distahead;
@@ -62,8 +57,7 @@ public class cowrace
 					count++;
 			}
 
-			else if (et < bt)
-			{
+			else if (et < bt) {
 				btime.add(0, bt - et);
 				bdistance.add(0, bd);
 				int before = distahead;
@@ -72,8 +66,7 @@ public class cowrace
 					count++;
 			}
 
-			else
-			{
+			else {
 				int before = distahead;
 				distahead += et * ed - bt * bd;
 				if (!first && (distahead < 0 && before >= 0 || distahead > 0 && before <= 0))

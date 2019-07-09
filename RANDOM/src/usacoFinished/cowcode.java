@@ -1,4 +1,5 @@
-//package usacoFinished;
+
+// package usacoFinished;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -8,10 +9,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
-public class cowcode
-{
-	public static void main(String[] args) throws IOException
-	{
+public class cowcode {
+	public static void main(String[] args) throws IOException {
 		BufferedReader f = new BufferedReader(new FileReader("cowcode.in"));
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("cowcode.out")));
 		StringTokenizer st = new StringTokenizer(f.readLine());
@@ -22,8 +21,7 @@ public class cowcode
 		f.close();
 	}
 
-	public static String solve(String code, long index)
-	{
+	public static String solve(String code, long index) {
 		if (index < code.length())
 			return code.substring((int) index, (int) index + 1);
 		int times = (int) Math.floor(Math.log10(index * 1.0 / code.length()) / Math.log10(2));

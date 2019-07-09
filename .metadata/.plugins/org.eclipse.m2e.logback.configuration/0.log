@@ -264,3 +264,37 @@
 2019-05-26 10:24:43,527 [Worker-6] WARN  org.eclipse.jgit.util.FS - null
 2019-05-26 15:00:42,153 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2019-05-26 15:00:43,113 [Worker-7] WARN  org.eclipse.jgit.util.FS - null
+2019-05-26 22:44:55,776 [Worker-8] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-05-26 22:44:56,774 [Worker-7] WARN  org.eclipse.jgit.util.FS - null
+2019-05-26 23:16:19,250 [Worker-8] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-05-26 23:16:20,722 [Worker-2] WARN  org.eclipse.jgit.util.FS - null
+2019-05-27 12:29:31,827 [Worker-6] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-05-27 12:29:32,709 [Worker-5] WARN  org.eclipse.jgit.util.FS - null
+2019-05-28 11:33:52,042 [Worker-9] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-05-28 11:33:54,008 [Worker-8] WARN  org.eclipse.jgit.util.FS - null
+2019-05-28 22:40:09,246 [Worker-7] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-05-28 22:40:11,046 [Worker-4] WARN  org.eclipse.jgit.util.FS - null
+2019-05-29 16:57:55,432 [Worker-5] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2019-05-29 16:57:56,864 [Worker-6] WARN  org.eclipse.jgit.util.FS - null
+2019-06-02 11:58:18,190 [Worker-7] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-06-02 11:58:19,644 [Worker-8] WARN  org.eclipse.jgit.util.FS - null
+2019-06-09 07:54:51,068 [Worker-7] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-06-09 07:54:52,508 [Worker-1] WARN  org.eclipse.jgit.util.FS - null
+2019-06-12 13:33:06,685 [Worker-6] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-06-12 13:33:07,064 [Worker-6] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2019-06-12 13:33:07,735 [Worker-4] WARN  org.eclipse.jgit.util.FS - null
+2019-06-13 08:32:16,753 [Worker-5] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-06-13 08:32:18,195 [Worker-4] WARN  org.eclipse.jgit.util.FS - null
+2019-06-21 15:38:12,947 [Worker-7] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-06-21 15:38:14,131 [Worker-5] WARN  org.eclipse.jgit.util.FS - null
+2019-06-24 13:11:27,269 [Worker-7] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-06-24 13:11:28,668 [Worker-10] WARN  org.eclipse.jgit.util.FS - null
+2019-06-28 12:53:53,867 [Worker-6] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-06-28 12:53:55,590 [Worker-10] WARN  org.eclipse.jgit.util.FS - null
+2019-07-02 19:35:51,065 [Worker-8] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-07-02 19:35:52,585 [Worker-12] WARN  org.eclipse.jgit.util.FS - null
+2019-07-06 09:17:49,875 [Worker-8] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-07-06 09:17:50,210 [Worker-8] INFO  c.g.t.t.d.PublishedGradleVersions - Updating Gradle version information cache failed. Using outdated cache.
+2019-07-06 09:17:50,980 [Worker-6] WARN  org.eclipse.jgit.util.FS - null
+2019-07-07 19:22:26,619 [Worker-5] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2019-07-07 19:22:29,594 [Worker-4] WARN  org.eclipse.jgit.util.FS - null

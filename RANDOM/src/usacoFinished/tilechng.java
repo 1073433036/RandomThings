@@ -1,4 +1,5 @@
-//package usacoFinished;
+
+// package usacoFinished;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -8,17 +9,14 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
-public class tilechng
-{
-	public static void main(String[] args) throws IOException
-	{
+public class tilechng {
+	public static void main(String[] args) throws IOException {
 		BufferedReader f = new BufferedReader(new FileReader("tilechng.in"));
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("tilechng.out")));
 		StringTokenizer st = new StringTokenizer(f.readLine());
 		int tilenum = Integer.parseInt(st.nextToken()), size = Integer.parseInt(st.nextToken());
 		int[] tiles = new int[tilenum + 1];
-		for (int i = 1; i <= tilenum; i++)
-		{
+		for (int i = 1; i <= tilenum; i++) {
 			st = new StringTokenizer(f.readLine());
 			tiles[i] = Integer.parseInt(st.nextToken());
 		}
@@ -28,8 +26,7 @@ public class tilechng
 			tileposs[i][0] = 100000000;
 
 		for (int j = 1; j <= tilenum; j++)
-			for (int i = 0; i <= size; i++)
-			{
+			for (int i = 0; i <= size; i++) {
 				tileposs[i][j] = 100000000;// current
 				for (int k = 1; k * k <= i; k++)// check+prevsolved<current
 					if ((tiles[j] - k) * (tiles[j] - k) + tileposs[i - k * k][j - 1] < tileposs[i][j])

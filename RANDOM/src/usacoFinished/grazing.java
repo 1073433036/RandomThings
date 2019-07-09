@@ -9,19 +9,16 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
-public class grazing
-{
+public class grazing {
 	public static int obstacle = 0;
 	public static boolean[][] maze = new boolean[5][5];
 
-	public static void main(String[] args) throws IOException
-	{
+	public static void main(String[] args) throws IOException {
 		BufferedReader f = new BufferedReader(new FileReader("grazing.in"));
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("grazing.out")));
 		StringTokenizer st = new StringTokenizer(f.readLine());
 		obstacle = Integer.parseInt(st.nextToken());
-		for (int i = 0; i < obstacle; i++)
-		{
+		for (int i = 0; i < obstacle; i++) {
 			st = new StringTokenizer(f.readLine());
 			maze[Integer.parseInt(st.nextToken()) - 1][Integer.parseInt(st.nextToken()) - 1] = true;
 		}
@@ -31,8 +28,7 @@ public class grazing
 		out.close();
 	}
 
-	public static int dfs(int x, int y)
-	{
+	public static int dfs(int x, int y) {
 		if (x < 0 || x > 4 || y < 0 || y > 4 || maze[x][y])
 			return 0;
 		obstacle++;

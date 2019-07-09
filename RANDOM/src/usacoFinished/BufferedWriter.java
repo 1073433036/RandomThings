@@ -1,8 +1,6 @@
 package usacoFinished;
 
-public class BufferedWriter
-{
-	public BufferedWriter(FileWriter str)
-	{
+public class BufferedWriter {
+	public BufferedWriter(FileWriter str) {
 	}
 }

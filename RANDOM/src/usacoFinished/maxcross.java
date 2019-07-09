@@ -8,10 +8,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.StringTokenizer;
 
-public class maxcross
-{
-	public static void main(String[] args) throws IOException
-	{
+public class maxcross {
+	public static void main(String[] args) throws IOException {
 		BufferedReader f = new BufferedReader(new FileReader("maxcross.in"));
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("maxcross.out")));
 		StringTokenizer st = new StringTokenizer(f.readLine());
@@ -19,8 +17,7 @@ public class maxcross
 		int row = Integer.parseInt(st.nextToken());
 		int damaged = Integer.parseInt(st.nextToken());
 		boolean[] allLights = new boolean[lights];
-		for (int i = 0; i < damaged; i++)
-		{
+		for (int i = 0; i < damaged; i++) {
 			st = new StringTokenizer(f.readLine());
 			allLights[Integer.parseInt(st.nextToken()) - 1] = true;
 		}
@@ -30,8 +27,7 @@ public class maxcross
 				inARow++;
 
 		int min = row - inARow;
-		for (int i = row; i < lights; i++)
-		{
+		for (int i = row; i < lights; i++) {
 			if (!allLights[i - row])
 				inARow--;
 			if (!allLights[i])

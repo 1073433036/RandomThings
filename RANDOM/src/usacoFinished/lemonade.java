@@ -10,10 +10,8 @@ import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-public class lemonade
-{
-	public static void main(String[] args) throws IOException
-	{
+public class lemonade {
+	public static void main(String[] args) throws IOException {
 		BufferedReader f = new BufferedReader(new FileReader("lemonade.in"));
 		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("lemonade.out")));
 		StringTokenizer st = new StringTokenizer(f.readLine());
@@ -25,8 +23,7 @@ public class lemonade
 
 		Arrays.sort(cowswait);
 		int count = 0;
-		for (int i = cows - 1; i >= 0; i--)
-		{
+		for (int i = cows - 1; i >= 0; i--) {
 			if (cowswait[i] >= count)
 				count++;
 			else
