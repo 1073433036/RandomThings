@@ -1,5 +1,5 @@
 
-package usaco;
+package usaco.NO;
 
 import java.util.StringTokenizer;
 import java.io.BufferedReader;

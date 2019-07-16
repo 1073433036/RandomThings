@@ -1,4 +1,4 @@
-package usaco.NO;
+package usaco;
 
 import java.util.StringTokenizer;
 import java.io.BufferedReader;
@@ -20,17 +20,8 @@ public class countcross
 		int cows = Integer.parseInt(st.nextToken());
 		int roads = Integer.parseInt(st.nextToken());
 		boolean[][][] canMove = new boolean[size][size][4];
-		for (int i = 0; i < roads; i++)
-		{
-			st = new StringTokenizer(f.readLine());
-			int r1 = Integer.parseInt(st.nextToken())-1, c1 = Integer.parseInt(st.nextToken())-1,
-					r2 = Integer.parseInt(st.nextToken())-1, c2 = Integer.parseInt(st.nextToken())-1;
-			if(c2>c1)
-			{
-				canMove[r1][c1]
-			}
-				
-		}
+		
+		
 		out.println();
 		out.close();
 		f.close();
