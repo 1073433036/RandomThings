@@ -117,6 +117,7 @@ class SortedMisc {
 		return -1;
 	}
 
+	//each element moved by <=k
 	public static void almostSortedKSort(int[] array, int target, int k) {
 		PriorityQueue<Integer> pq = new PriorityQueue<>();
 		for (int i = 0; i < k + 1; i++) {

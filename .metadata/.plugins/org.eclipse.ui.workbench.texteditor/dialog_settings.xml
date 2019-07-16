@@ -6,12 +6,19 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="sort" key="selection"/>
+		<item value="32" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="32"/>
+			<item value="24"/>
+			<item value="22"/>
+			<item value="edgeNum"/>
+			<item value="printk"/>
+			<item value="k"/>
+			<item value="ksmall"/>
 			<item value="sort"/>
 			<item value="sort nearly sorted"/>
 			<item value="list"/>
@@ -20,13 +27,6 @@
 			<item value="grass"/>
 			<item value="2"/>
 			<item value="Date1"/>
-			<item value="date"/>
-			<item value="hills[i]"/>
-			<item value=" 0"/>
-			<item value="0 "/>
-			<item value="%f"/>
-			<item value="%d"/>
-			<item value="looptracker"/>
 		</list>
 		<list key="replacehistory">
 			<item value="array"/>

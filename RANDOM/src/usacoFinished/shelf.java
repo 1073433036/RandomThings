@@ -1,9 +1,9 @@
 
-// package usacoFinished;
+package usacoFinished;
 
 import java.util.Scanner;
 
-public class Main {
+public class shelf {
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
 

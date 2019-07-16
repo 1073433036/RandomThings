@@ -75,7 +75,7 @@ class KruskalsMinSpanningTree {
 			Edge[] result = new Edge[vertexNum];
 			int e = 0;
 			int index = 0;
-			Arrays.sort(result);
+			Arrays.sort(edges);
 			Subset[] subsets = new Subset[vertexNum];
 			for (int i = 0; i < vertexNum; i++) {
 				subsets[i] = new Subset(i, 0);

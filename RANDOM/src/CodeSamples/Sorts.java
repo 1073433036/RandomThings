@@ -4,10 +4,17 @@ import java.util.ArrayList;
 
 class Sorts {
 	private static class Node {
+		Node prev;// only doubly linked list
 		Node next;
 		int data;
 
 		public Node(Node next, int data) {
+			this.next = next;
+			this.data = data;
+		}
+
+		public Node(Node prev, Node next, int data) {
+			this.prev = prev;
 			this.next = next;
 			this.data = data;
 		}
@@ -231,6 +238,29 @@ class Sorts {
 
 			quickSort(array, low, i);
 			quickSort(array, i + 1, high);
+		}
+	}
+
+	public static void quickSortDoubleLinkedList(Node head, Node end) {
+		if (end != null && head != end && head != end.next) {
+			int pivot = head.data;
+			Node i = head.prev;
+			for (Node j = head; j != end; j = j.next) {
+				if (j.data <= pivot) {
+					i = i == null ? head : i.next;
+					int temp = i.data;
+					i.data = j.data;
+					j.data = temp;
+				}
+			}
+
+			i = i == null ? head : i.next;
+			int temp = i.data;
+			i.data = head.data;
+			head.data = temp;
+
+			quickSortDoubleLinkedList(head, i.prev);
+			quickSortDoubleLinkedList(i.next, end);
 		}
 	}
 
