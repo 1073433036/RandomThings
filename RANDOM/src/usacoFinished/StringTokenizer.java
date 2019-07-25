@@ -1,22 +1,17 @@
 package usacoFinished;
 
-import java.util.Scanner;
-
 public class StringTokenizer {
-	public StringTokenizer(String str) {
-	}
+	String line;
+	String[] splitLine;
+	int ind = 0;
 
-	public static Scanner tester = new Scanner(System.in);
+	public StringTokenizer(String nextLine) {
+		line = nextLine;
+		splitLine = line.split(" ");
+	}
 
 	public String nextToken() {
-		return tester.next();
+		return splitLine[ind++];
 	}
 
-	public String readLine() {
-		return "";
-	}
-
-	public static void close() {
-		tester.close();
-	}
 }

@@ -3,50 +3,44 @@ package scam;
 import java.util.Arrays;
 import java.util.Scanner;
 
-class city implements Comparable<city>
-{
-	int x, y;
+class city implements Comparable<city> {
+	int x1;
+	int x2;
 
-	public city(int x, int y)
-	{
-		this.x = x;
-		this.y = y;
+	public city(int x1, int x2) {
+		this.x1 = x1;
+		this.x2 = x2;
 	}
 
-	public int compareTo(city b)
-	{
-		return x - b.x;
+	public int compareTo(city b) {
+		return x1 - b.x1;
 	}
 
 }
 
-public class bridges
-{
-	public static void main(String[] args)
-	{
+public class bridges {
+	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-		int num = scan.nextInt();
+		int numCities = scan.nextInt();
 
-		city[] cities = new city[num];
-
-		for (int i = 0; i < num; i++)
+		city[] cities = new city[numCities];
+		for (int i = 0; i < numCities; i++) {
 			cities[i] = new city(scan.nextInt(), scan.nextInt());
+		}
 		Arrays.sort(cities);
-		int[] lis = new int[num];
-		lis[0] = 1;
-		int total = 0;
-		for (int i = 1; i < num; i++)
-		{
-			int max = 0;
-			for (int j = 0; j < i; j++)
-				if (max < lis[j] && cities[j].y < cities[i].y)
-					max = lis[j];
-			lis[i] = max + 1;
-			if (total < lis[i])
-				total = lis[i];
+		int[] lis = new int[numCities];
+		int max = 0;
+		for (int i = 0; i < numCities; i++) {
+			lis[i] = 1;
+			for (int j = 0; j < i; j++) {
+				if (cities[j].x2 < cities[i].x2) {
+					lis[i] = Math.max(lis[i], lis[j] + 1);
+				}
+			}
+			max = Math.max(max, lis[i]);
 		}
 
-		System.out.println(total);
+		System.out.println(max);
 		scan.close();
 	}
 }
