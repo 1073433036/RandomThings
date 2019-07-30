@@ -43,10 +43,6 @@ public class Out_Of_Sorts_2018USOpenSilver1 {
 
 		Arrays.sort(nums);
 
-		for (Pair p : nums) {
-			System.out.println(p.index + " " + p.val);
-		}
-
 		int max = 0;
 		for (int i = 0; i < num; i++) {
 			max = Math.max(max, nums[i].index - i);

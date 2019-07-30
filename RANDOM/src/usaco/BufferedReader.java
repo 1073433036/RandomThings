@@ -9,10 +9,25 @@ public class BufferedReader {
 	static Scanner scan = new Scanner(System.in);
 
 	public String readLine() {
+		counter--;
 		return scan.nextLine();
 	}
 
 	public void close() {
 		scan.close();
+	}
+
+	int counter = -1;
+
+	public boolean ready() {
+		if (counter < 0) {
+			System.out.println("how many?");
+			counter = scan.nextInt();
+			scan.nextLine();
+		}
+		if (counter == 0) {
+			return false;
+		}
+		return true;
 	}
 }

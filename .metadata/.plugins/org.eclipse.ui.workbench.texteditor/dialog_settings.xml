@@ -6,12 +6,20 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="32" key="selection"/>
+		<item value="false" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="ort java.io.BufferedReader;"/>
+			<item value="false"/>
+			<item value="il.StringTokenizer;"/>
+			<item value="13"/>
+			<item value="//"/>
+			<item value="redReader;"/>
+			<item value="StackOverflowError.dfs"/>
+			<item value="get(frames[r][c])"/>
 			<item value="32"/>
 			<item value="24"/>
 			<item value="22"/>
@@ -19,16 +27,9 @@
 			<item value="printk"/>
 			<item value="k"/>
 			<item value="ksmall"/>
-			<item value="sort"/>
-			<item value="sort nearly sorted"/>
-			<item value="list"/>
-			<item value="int target, int[] list"/>
-			<item value="public static"/>
-			<item value="grass"/>
-			<item value="2"/>
-			<item value="Date1"/>
 		</list>
 		<list key="replacehistory">
+			<item value="[frames[r][c]]"/>
 			<item value="array"/>
 			<item value="int[] array, int target"/>
 			<item value="Date"/>
@@ -43,7 +44,6 @@
 			<item value="nums"/>
 			<item value="3"/>
 			<item value="2"/>
-			<item value="1"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

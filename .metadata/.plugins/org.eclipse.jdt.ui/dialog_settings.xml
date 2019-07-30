@@ -28,6 +28,7 @@
 	<item value="/Users/JustinKim/Documents/workspace/RANDOM/EXT ARCHIVE" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="4" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.last_focus"/>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
+		<item value="false" key="renameSubpackages"/>
 		<item value="false" key="updateQualifiedNames"/>
 		<item value="*" key="patterns"/>
 		<item value="false" key="updateSimilarElements"/>
