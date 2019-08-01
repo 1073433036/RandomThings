@@ -1,6 +1,7 @@
 package CodeSamples;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 class Sorts {
 	private static class Node {
@@ -18,6 +19,29 @@ class Sorts {
 			this.next = next;
 			this.data = data;
 		}
+	}
+
+	public static Node insertionSortLinkedList(Node head) {
+		Node sorted = null;
+		Node current = head;
+		while (current != null) {
+			Node next = current.next;
+			if (sorted == null || sorted.data >= current.data) {
+				current.next = sorted;
+				sorted = current;
+			}
+			else {
+				Node c = sorted;
+				while (c.next != null && c.next.data < current.data) {
+					c = c.next;
+				}
+				current.next = c.next;
+				c.next = current;
+			}
+			current = next;
+		}
+
+		return head;
 	}
 
 	public static Node sortedMerge(Node left, Node right) {
@@ -432,11 +456,10 @@ class Sorts {
 	public static void insertionSort(int[] array) {
 		for (int i = 1; i < array.length; i++) {
 			int compare = array[i];
-			int j;
-			for (j = i - 1; j >= 0 && array[j] > compare; j--) {
-				array[j + 1] = array[j];
-			}
-			array[j + 1] = compare;
+			int j = Arrays.binarySearch(array, 0, i, compare) + 1;
+
+			System.arraycopy(array, j, array, j + 1, i - j);
+			array[j] = compare;
 		}
 	}
 

@@ -1,5 +1,6 @@
 package CodeSamples;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
@@ -42,6 +43,18 @@ class SortedMisc {
 		}
 
 		return new int[] { start, end };
+	}
+
+	public static int findKthSmallest(int[] array, int k) {
+		ArrayList<Integer> temp = new ArrayList<>(array.length);
+		for (int item : array) {
+			temp.add(item);
+		}
+		PriorityQueue<Integer> pq = new PriorityQueue<>(temp);
+		for (int i = 0; i < k - 1; i++) {
+			pq.poll();
+		}
+		return pq.poll();
 	}
 
 	public static int[] findKCloseTarget(int[] array, int target, int k) {
@@ -117,7 +130,7 @@ class SortedMisc {
 		return -1;
 	}
 
-	//each element moved by <=k
+	// each element moved by <=k
 	public static void almostSortedKSort(int[] array, int target, int k) {
 		PriorityQueue<Integer> pq = new PriorityQueue<>();
 		for (int i = 0; i < k + 1; i++) {
@@ -237,4 +250,19 @@ class SortedMisc {
 		return 0;
 	}
 
+	// max to front and min to end
+	public static int minAdjSwapsMaxMinEnds(int[] array) {
+		int minInd = 0;
+		int maxInd = 0;
+		for (int i = 1; i < array.length; i++) {
+			if (array[minInd] >= array[i]) {
+				minInd = i;
+			}
+			if (array[maxInd] < array[i]) {
+				maxInd = i;
+			}
+		}
+
+		return maxInd + array.length - minInd + (maxInd < minInd ? -1 : -2);
+	}
 }

@@ -6,12 +6,18 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="false" key="selection"/>
+		<item value="insertion" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="a.io.BufferedReader;"/>
+			<item value="insertion"/>
+			<item value="binary"/>
+			<item value="smallest"/>
+			<item value="kth"/>
+			<item value="til.StringTokenizer;"/>
 			<item value="ort java.io.BufferedReader;"/>
 			<item value="false"/>
 			<item value="il.StringTokenizer;"/>
@@ -21,12 +27,6 @@
 			<item value="StackOverflowError.dfs"/>
 			<item value="get(frames[r][c])"/>
 			<item value="32"/>
-			<item value="24"/>
-			<item value="22"/>
-			<item value="edgeNum"/>
-			<item value="printk"/>
-			<item value="k"/>
-			<item value="ksmall"/>
 		</list>
 		<list key="replacehistory">
 			<item value="[frames[r][c]]"/>
