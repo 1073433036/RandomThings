@@ -22,7 +22,6 @@ public class beads {
 		st = new StringTokenizer(f.readLine());
 		String necklace = st.nextToken();
 		necklace = necklace + necklace + necklace;
-		System.out.println(necklace);
 		int max = 0;
 		for (int i = numBeads; i < numBeads * 2; i++) {
 			int count = 0;
@@ -35,7 +34,6 @@ public class beads {
 				count++;
 				j--;
 			}
-			System.out.print(count + " ");
 			j = i + 1;
 			color = 'w';
 			while (j < necklace.length()
@@ -46,7 +44,6 @@ public class beads {
 				count++;
 				j++;
 			}
-			System.out.println(count);
 			if (count > numBeads) {
 				max = numBeads;
 				break;
