@@ -12,6 +12,7 @@
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="java.io.BufferedReader;"/>
 			<item value="j"/>
 			<item value="a.io.BufferedReader;"/>
 			<item value="insertion"/>
@@ -26,7 +27,6 @@
 			<item value="//"/>
 			<item value="redReader;"/>
 			<item value="StackOverflowError.dfs"/>
-			<item value="get(frames[r][c])"/>
 		</list>
 		<list key="replacehistory">
 			<item value="[frames[r][c]]"/>
