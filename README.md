@@ -1,3 +1,2 @@
-This is just a collection of random things I'm working on.
-
-In /RANDOM there is a usacofinished folder with lots of solutions to usaco problems
+Just a collection of random things I've worked on.
+In /RANDOM there is a usacoFinished folder with java solutions to USACO problems
