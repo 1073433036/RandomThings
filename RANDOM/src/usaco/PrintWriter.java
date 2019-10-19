@@ -1,6 +1,8 @@
 package usaco;
 
 public class PrintWriter {
+	public static long startTime = -1;
+
 	public PrintWriter(BufferedWriter str) {
 	}
 
@@ -13,6 +15,7 @@ public class PrintWriter {
 	}
 
 	public void close() {
+		System.out.println("Program took " + (System.currentTimeMillis() - startTime) + " milliseconds");
 	}
 
 	public void println() {

@@ -1,19 +1,14 @@
-package usacoFinished;
-// import java.io.BufferedReader;
-// import java.io.BufferedWriter;
-// import java.io.FileReader;
-// import java.io.FileWriter;
-// import java.io.PrintWriter;
-// import java.util.StringTokenizer;
+
+// package usacoFinished;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.util.StringTokenizer;
 
 import java.io.IOException;
-
-import usaco.BufferedReader;
-import usaco.BufferedWriter;
-import usaco.FileReader;
-import usaco.FileWriter;
-import usaco.PrintWriter;
-import usaco.StringTokenizer;
 
 public class Hay_Bales_2011DecBronze1 {
 	public static void main(String[] args) throws IOException {
@@ -38,7 +33,7 @@ public class Hay_Bales_2011DecBronze1 {
 				total += bales[i] - average;
 			}
 		}
-		
+
 		out.println(total);
 		out.close();
 		f.close();

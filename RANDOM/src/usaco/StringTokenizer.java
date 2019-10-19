@@ -11,6 +11,9 @@ public class StringTokenizer {
 	}
 
 	public String nextToken() {
+		if (PrintWriter.startTime == -1) {
+			PrintWriter.startTime = System.currentTimeMillis();
+		}
 		return splitLine[ind++];
 	}
 
