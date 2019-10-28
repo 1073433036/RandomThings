@@ -19,10 +19,10 @@ public class Bovine_Alliance_2012JanGold3 {
 		// how many different ways to put directed edges in a component
 		// bfs
 		// calculate result of each component one by one, keep running product
-		// tree is n
-		// 1cycle is 2
-		// 2+ cycle is impossible
-		// bfs back edge
+		// tree-n-1 edges is n
+		// 1cycle-n edges is 2
+		
+		
 
 		out.close();
 		f.close();

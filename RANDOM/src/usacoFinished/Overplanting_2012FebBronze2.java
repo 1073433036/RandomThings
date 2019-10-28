@@ -13,8 +13,8 @@ import java.io.IOException;
 public class Overplanting_2012FebBronze2 {
 
 	public static void main(String[] args) throws IOException {
-		BufferedReader f = new BufferedReader(new FileReader("auto.in"));
-		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("auto.out")));
+		BufferedReader f = new BufferedReader(new FileReader("planting.in"));
+		PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("planting.out")));
 		StringTokenizer st = new StringTokenizer(f.readLine());
 		int numRegions = Integer.parseInt(st.nextToken());
 
