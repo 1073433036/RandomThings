@@ -415,7 +415,7 @@ class Sorts {
 		if (l < r) {
 			int m = (l + r) / 2;
 			mergeSort(array, l, m);
-			mergeSort(array, m, r);
+			mergeSort(array, m + 1, r);
 
 			int[] left = new int[m - l + 1];
 			int[] right = new int[r - m];
@@ -432,6 +432,7 @@ class Sorts {
 			while (i < left.length && j < right.length) {
 				if (left[i] <= right[j]) {
 					array[k] = left[i];
+					i++;
 				}
 				else {
 					array[k] = right[j];
