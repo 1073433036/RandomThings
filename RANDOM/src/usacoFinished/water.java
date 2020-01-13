@@ -19,25 +19,25 @@ public class water {
 		}
 
 		boolean[] visited = new boolean[numPastures];
-		int[] weightedPastures = new int[numPastures];
+		int[] distances = new int[numPastures];
 
 		for (int i = 0; i < numPastures; i++) {
-			weightedPastures[i] = wellCost[i];
+			distances[i] = wellCost[i];
 		}
 
 		int total = 0;
 		for (int i = 0; i < numPastures; i++) {
 			int min = -1;
 			for (int j = 0; j < numPastures; j++) {
-				if (!visited[j] && (min == -1 || weightedPastures[j] < weightedPastures[min])) {
+				if (!visited[j] && (min == -1 || distances[j] < distances[min])) {
 					min = j;
 				}
 			}
 			visited[min] = true;
-			total += weightedPastures[min];
+			total += distances[min];
 			for (int j = 0; j < numPastures; j++) {
-				if (min != j && costs[min][j] < weightedPastures[j]) {
-					weightedPastures[j] = costs[min][j];
+				if (min != j && costs[min][j] < distances[j]) {
+					distances[j] = costs[min][j];
 				}
 			}
 		}
