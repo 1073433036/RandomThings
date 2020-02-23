@@ -6,12 +6,14 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="usaco" key="selection"/>
+		<item value="point" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="Point"/>
+			<item value="doIntersect"/>
 			<item value="usaco"/>
 			<item value="java.io.BufferedReader;"/>
 			<item value="j"/>
@@ -25,10 +27,10 @@
 			<item value="false"/>
 			<item value="il.StringTokenizer;"/>
 			<item value="13"/>
-			<item value="//"/>
-			<item value="redReader;"/>
 		</list>
 		<list key="replacehistory">
+			<item value="point"/>
+			<item value="intersects"/>
 			<item value="[frames[r][c]]"/>
 			<item value="array"/>
 			<item value="int[] array, int target"/>
@@ -42,15 +44,13 @@
 			<item value="(Python3Parser."/>
 			<item value="AltPython"/>
 			<item value="nums"/>
-			<item value="3"/>
-			<item value="2"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="290" key="DIALOG_WIDTH"/>
 		<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
 		<item value="409" key="DIALOG_HEIGHT"/>
-		<item value="990" key="DIALOG_X_ORIGIN"/>
+		<item value="877" key="DIALOG_X_ORIGIN"/>
 		<item value="40" key="DIALOG_Y_ORIGIN"/>
 	</section>
 </section>

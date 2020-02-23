@@ -2,7 +2,9 @@ package CodeSamples;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.PriorityQueue;
+import java.util.Scanner;
 
 public class LeptonPaste {
 	private static class old {
@@ -503,6 +505,39 @@ public class LeptonPaste {
 					return ed[N][M];
 				}
 			}
+			// vim: syntax=java
+			/*
+			 * Finds the shortest path from any node to any other node by
+			 * getting the
+			 * path for every intermediate node from every start node to every
+			 * end node
+			 * 
+			 * O(V^3)
+			 */
+
+			private static int numNodes;
+			private static int[][] connections;
+			private static int[][] distances;
+
+			public static void floydwarshall() {
+				distances = new int[numNodes][numNodes];
+
+				for (int i = 0; i < numNodes; i++) {
+					for (int j = 0; j < numNodes; j++) {
+						distances[i][j] = connections[i][j];
+					}
+				}
+
+				for (int j = 0; j < numNodes; j++) {
+					for (int i = 0; i < numNodes; i++) {
+						for (int k = 0; k < numNodes; k++) {
+							if (distances[i][j] != Integer.MAX_VALUE && distances[j][k] != Integer.MAX_VALUE) {
+								distances[i][k] = Math.min(distances[i][k], distances[i][j] + distances[j][k]);
+							}
+						}
+					}
+				}
+			}
 		}
 		// vim: syntax=java
 		/*
@@ -539,18 +574,238 @@ public class LeptonPaste {
 
 			return c[target][numCoins];
 		}
+
+		public static class old5 {
+			// vim: syntax=java
+			/*
+			 * Finds the shortest path from any node to all other nodes by
+			 * finding the
+			 * shortest paths from least amount of edges to greatest
+			 * 
+			 * O(VE)
+			 */
+
+			private static int numNodes;
+			private static int numEdges;
+			private static ArrayList<edge> edges;
+			private static int[] distances;
+
+			private static class edge {
+				int src;
+				int dest;
+				int weight;
+
+				public edge(int src, int dest, int weight) {
+					this.src = src;
+					this.dest = dest;
+					this.weight = weight;
+				}
+			}
+
+			public static void bellmanford(int src) {
+				for (int i = 0; i < numNodes; i++) {
+					distances[i] = Integer.MAX_VALUE;
+				}
+
+				distances[src] = 0;
+
+				boolean changed = false;
+				for (int i = 0; i < numNodes; i++) {
+					changed = false;
+					for (int j = 0; j < numEdges; j++) {
+						int n1 = edges.get(j).src;
+						int n2 = edges.get(j).dest;
+						int weight = edges.get(j).weight;
+						int cost = distances[n1] + weight;
+						if (distances[n1] != Integer.MAX_VALUE && distances[n2] > cost) {
+							distances[n2] = cost;
+							changed = true;
+						}
+					}
+
+					if (!changed) {
+						break;
+					}
+				}
+
+				if (changed) {
+					System.out.println("negative weight cycle");
+				}
+			}
+			// vim: syntax=java
+			/*
+			 * Finds if a point is inside or outside of a polygon by counting
+			 * the number
+			 * of intersections with all of the edges of the polygon
+			 * 
+			 * O(S)
+			 */
+
+			public static int numpoints;
+			public static point[] polygon;
+
+			private static class point {
+				int x;
+				int y;
+
+				public point(int x, int y) {
+					this.x = x;
+					this.y = y;
+				}
+			}
+
+			// p,q,r are colinear
+			public static boolean onsegment(point p, point q, point r) {
+				return q.x <= Math.max(p.x, r.x) && q.x >= Math.min(p.x, r.x) && q.y <= Math.max(p.y, r.y)
+						&& q.y >= Math.min(p.y, r.y);
+			}
+
+			// 0= colinear, 1= clockwise, -1= counterclockwise
+			public static int orientation(point p, point q, point r) {
+				return (int) Math.signum((q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y));
+			}
+
+			public static boolean intersects(point p1, point p2, point q1, point q2) {
+				int o1 = orientation(p1, p2, q1);
+				int o2 = orientation(p1, p2, q2);
+				int o3 = orientation(q1, q2, p1);
+				int o4 = orientation(q1, q2, p2);
+
+				if (o1 != o2 && o3 != o4) {
+					return true;
+				}
+
+				return o1 == 0 && onsegment(p1, q1, p2) || o2 == 0 && onsegment(p1, q2, p2)
+						|| o3 == 0 && onsegment(q1, p1, q2) || o4 == 0 && onsegment(q1, p2, q2);
+			}
+
+			public static boolean inside(point[] polygon, point p) {
+				point extreme = new point(10000, p.y + 1);
+				int count = 0;
+				for (int i = 0; i < numpoints; i++) {
+					int next = (i + 1) % numpoints;
+					if (intersects(polygon[i], polygon[next], p, extreme)) {
+						if (orientation(polygon[i], p, polygon[next]) == 0) {
+							return onsegment(polygon[i], p, polygon[next]);
+						}
+						count++;
+					}
+				}
+
+				return count % 2 == 1;
+			}
+		}
+		// vim: syntax=java
+		/*
+		 * Finds if two line segments intersect by checking if the orientation
+		 * between 2 pairs of 3 points differ
+		 * o(p1, q1, p2) != o(p1, q1, q2) and o(p2, q2, p1) != o(p2, q2, q1)
+		 * 
+		 * O(1)
+		 */
+
+		private static class point {
+			int x;
+			int y;
+
+			public point(int x, int y) {
+				this.x = x;
+				this.y = y;
+			}
+		}
+
+		// p,q,r are colinear
+		public static boolean onsegment(point p, point q, point r) {
+			return q.x <= Math.max(p.x, r.x) && q.x >= Math.min(p.x, r.x) && q.y <= Math.max(p.y, r.y)
+					&& q.y >= Math.min(p.y, r.y);
+		}
+
+		// 0= colinear, 1= clockwise, -1= counterclockwise
+		public static int orientation(point p, point q, point r) {
+			return (int) Math.signum((q.y - p.y) * (r.x - q.x) - (q.x - p.x) * (r.y - q.y));
+		}
+
+		public static boolean intersects(point p1, point p2, point q1, point q2) {
+			int o1 = orientation(p1, q1, p2);
+			int o2 = orientation(p1, q1, q2);
+			int o3 = orientation(p2, q2, p1);
+			int o4 = orientation(p2, q2, q1);
+
+			if (o1 != o2 && o3 != o4) {
+				return true;
+			}
+
+			return o1 == 0 && o2 == 0 && (onsegment(p1, p2, q1) || onsegment(p1, q2, q1));
+		}
+
+		public static class old6 {
+
+			// vim: syntax=java
+			/*
+			 * Find an ordering of the graph such that for every edge, the
+			 * source comes
+			 * before the destination by removing nodes that have no indegree
+			 * and
+			 * updating the other values
+			 *
+			 * O(V+E)
+			 */
+
+			private static int numNodes;
+			private static ArrayList<ArrayList<Integer>> connections;
+
+			public static int[] topologicalsort() {
+				int[] result = new int[numNodes];
+				int[] indegrees = new int[numNodes];
+				for (ArrayList<Integer> dests : connections) {
+					for (Integer conn : dests) {
+						indegrees[conn]++;
+					}
+				}
+
+				LinkedList<Integer> nodesleft = new LinkedList<>();
+				for (int i = 0; i < numNodes; i++) {
+					if (indegrees[i] == 0) {
+						nodesleft.add(i);
+					}
+				}
+
+				int i = 0;
+				while (!nodesleft.isEmpty()) {
+					int cur = nodesleft.poll();
+
+					result[i++] = cur;
+					for (int conn : connections.get(cur)) {
+						indegrees[conn]--;
+						if (indegrees[conn] == 0) {
+							nodesleft.add(conn);
+						}
+					}
+				}
+
+				return result;
+			}
+		}
 	}
 
-	// vim: syntax=java
-	/*
-	 * Finds the minimum number of coins with reusing required to make an amount
-	 * c[i][j]=minimum number of coins required to make amount i with j coins
-	 * c[i][j]=min(c[i][j-1], 1+c[i-coins[k]][j]) for k<=j
-	 * 
-	 * O(NK)
-	 */
-
+	
+	
 	public static void main(String[] args) {
-
+//		Scanner scan = new Scanner(System.in);
+//		numNodes = 5;
+//		int numConn = 8;
+//		connections = new ArrayList<>();
+//		for (int i = 0; i < numNodes; i++) {
+//			connections.add(new ArrayList<edge>());
+//		}
+//
+//		for (int i = 0; i < numConn; i++) {
+//			int src = scan.nextInt();
+//			int dest = scan.nextInt();
+//			int weight = scan.nextInt();
+//			connections.get(src).add(new edge(dest, weight));
+//		}
+//
+//		System.out.println(Arrays.toString(sparsedijkstra(0)));
 	}
 }
