@@ -1,16 +1,29 @@
 package scam;
 
-import java.util.Arrays;
-import java.util.Scanner;
+import java.util.StringTokenizer;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import java.lang.reflect.Array;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+
+import java.io.IOException;
 
 public class CountInversions {
-	static int count = 0;
+	// vim: syntax=java
+	/*
+	 * Finds all inversions of given array where i<j and array[i]>array[j]
+	 * 
+	 * O(NlogN)
+	 */
 
-	public static void mergeSort(int[] array, int l, int r) {
+	public static long countInversions(int[] array, int l, int r) {
+		long inv = 0;
 		if (l < r) {
 			int m = (l + r) / 2;
-			mergeSort(array, l, m);
-			mergeSort(array, m + 1, r);
+			inv += countInversions(array, l, m);
+			inv += countInversions(array, m + 1, r);
 
 			int[] left = new int[m - l + 1];
 			int[] right = new int[r - m];
@@ -30,9 +43,9 @@ public class CountInversions {
 					i++;
 				}
 				else {
-					count += m - i + 1;
 					array[k] = right[j];
 					j++;
+					inv += m + 1 - l - i;
 				}
 				k++;
 			}
@@ -48,15 +61,19 @@ public class CountInversions {
 				k++;
 			}
 		}
+		return inv;
 	}
 
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		int[] arr = { 1, 3, 5, 2, 4, 6 };
-		mergeSort(arr, 0, arr.length - 1);
-		System.out.println(Arrays.toString(arr));
-
-		System.out.println(count);
-		scan.close();
+	public static void main(String[] args) throws IOException {
+		BufferedReader f = new BufferedReader(new FileReader("nums.txt"));
+		StringTokenizer st;
+		int[] array = new int[100000];
+		for (int i = 0; i < array.length; i++) {
+			st = new StringTokenizer(f.readLine());
+			array[i] = Integer.parseInt(st.nextToken());
+		}
+		
+		System.out.println(countInversions(array, 0, array.length - 1));
+		f.close();
 	}
 }

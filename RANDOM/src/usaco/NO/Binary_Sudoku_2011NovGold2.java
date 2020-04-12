@@ -31,8 +31,6 @@ public class Binary_Sudoku_2011NovGold2 {
 				board[i][j] = Integer.parseInt("" + row.charAt(j)) == 1;
 			}
 		}
-		
-		int[][][] minflips=new int[9][9][]
 
 		out.close();
 		f.close();

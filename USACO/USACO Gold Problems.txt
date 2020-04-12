@@ -1,0 +1,98 @@
+USACO 2015 DECEMBER GOLD
+
+1) High Card Low Card (Gold)			Greedy
+2) Fruit Feast							Twice knapsack or twice BFS
+3) Bessie's Dream						Shortest path on a grid. Dijsktra or BFS
+
+
+USACO 2016 JANUARY GOLD
+
+1) Angry Cows							Two DPs, left to right and right to left. Answer is the best 	
+										crossover cost. 
+										Second solution is binary search on the result.
+2) Radio Contact  						DP. Dynamic Time Warping. O(N*M) table filling.
+3) Lights Out							Simulation. Multiset.
+
+USACO 2016 FEB GOLD
+
+1) Circular Barn						Simulation. ...
+2) Circular Barn Revisited				DP. Make a solution for a vector. Rotate the vector N-1 times.
+3) Fenced In							Construct a graph from the grid. Run MST algorithm.
+
+USACO 2016 US OPEN GOLD
+
+1) Splitting the Field					Disjoint rectangles, sweep line, multiset
+2) Closing the farm						DSU
+3) 248									DP, O(N^3), chain matrix multiplication
+
+USACO 2016 DECEMBER GOLD
+
+1) Moocast								DSU or Binary search on result + DFS
+2) Cow Check List						2D DP
+3) Lasers and Mirrors					Split point + construct graph + 0-1 BFS
+
+USACO 2017 JANUARY GOLD
+
+1) Balanced Photo						Fenwick Tree
+2) Hoof, Paper, Scissors				DP, table filling
+3) Cow Navigation						BFS in six dimensions
+
+USACO 2017 FEBRUARY GOLD
+
+1)Why Did the Cow Cross the Road		BFS
+2)Why Did the Cow Cross the Road II		DP 2D table filling. Only last two rows are necessary.
+3)Why Did the Cow Cross the Road III	Fenwick tree or Mo's algorithm
+
+
+USACO 2017 US OPEN
+
+1)Bovine Genomics						Binary search on result or Rolling Hash Function
+2)Modern Art 2							Stack, depth of parentheses
+
+USACO 2017 DECEMBER
+
+1) A Pie for a Pie						BFS
+2) Barn Painting						DP on a tree
+3) Haybale Feast						Two pointers + multiset (max value)
+
+USACO 2018 JANUARY
+
+1) MooTube								DSU on a tree
+2) Cow at Large							BFS or DFS on a tree. All distances to the root and leaves
+3) Stamp Painting *						Combinatorics
+
+USACO 2018 FEBRUARY
+
+1) Snow Boots							Sorting + Simulation
+2) Directory Traversal					Construct a tree, calculate down-sum and up-sum with two DFS
+3) Taming the Herd						DP, 3D table filling
+
+USACO 2018 OPEN
+1) Out of Sorts							Cost of a modified bubble sorting, Fenwick Tree
+2) Milking Order						Binary Search + Top Sorts
+3) Talent Show							DP, Knapsack
+
+USACO 2018 DECEMBER
+1) Fine Dining							Modifying graph + two times Dijkstra
+2) Cowpatibility						Mapping + Inclusion and Exclusion
+3) Teamwork								DP Table Filling
+
+USACO 2019 JANUARY
+1) Cow Poetry							Combinatorics + DP + number theory
+2) Sleepy Cow Sorting					Fenwick tree
+3) Shortcut								Dijkstra + DFS on Dijsktra's tree
+
+USACO 2019 FEBRUARY
+1) Cow Land								Heavy-light decomposition + Segment Tree, LCA, Prefix XOR
+2) Dishwashing							Greedy, simulation, binary search
+3) Painting the Barn					Geometry, 2D prefix sum, disjoint rectangles, maximum area rectangle		
+
+USACO 2019 OPEN
+1) Snakes								DP Table filling with O(N) transition
+2) I Would Walk 500 Miles				Binary search on result or MST
+3) Balancing Inversions					Greedy, Simulation	
+
+USACO 2019 DECEMBER
+1) Milk Pumping							Graph. Many times Dijsktra or BFS
+2) Milk Visits							Tree. Accumulating from root to leaves + LCA or DFS + Stack + Ancestor-descendant
+3) Moortal Cowmbat						DP. Floyd Warshall, Precalculation, Table Filling
