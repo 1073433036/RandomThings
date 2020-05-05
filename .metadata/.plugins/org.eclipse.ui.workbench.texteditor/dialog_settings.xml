@@ -6,12 +6,19 @@
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="point" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="true" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="39225132083"/>
+			<item value="-21485556999"/>
+			<item value="66163047946"/>
+			<item value="-60611969960"/>
+			<item value="-15416192970"/>
+			<item value="16494115310"/>
+			<item value="5435831800"/>
 			<item value="Point"/>
 			<item value="doIntersect"/>
 			<item value="usaco"/>
@@ -20,13 +27,6 @@
 			<item value="a.io.BufferedReader;"/>
 			<item value="insertion"/>
 			<item value="binary"/>
-			<item value="smallest"/>
-			<item value="kth"/>
-			<item value="til.StringTokenizer;"/>
-			<item value="ort java.io.BufferedReader;"/>
-			<item value="false"/>
-			<item value="il.StringTokenizer;"/>
-			<item value="13"/>
 		</list>
 		<list key="replacehistory">
 			<item value="point"/>

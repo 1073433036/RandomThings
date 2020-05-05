@@ -7,26 +7,34 @@
 	<item value="45" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.preferred_x"/>
 	<item value="20" key="org.eclipse.jdt.uiformatter_page.modify_dialog_tab_page.last_focus_index"/>
 	<item value="2" key="TypeHierarchyViewPart.hierarchyview"/>
+	<item value="500" key="CallHierarchyViewPart.ratio1"/>
+	<item value="500" key="CallHierarchyViewPart.ratio3"/>
 	<item value="false" key="TypeHierarchyViewPart.qualifiednames"/>
 	<item value="70" key="org.eclipse.jdt.uiformatter_page.white_space.java_view.option"/>
 	<item value="0" key="org.eclipse.jdt.uiformatter_page.white_space_tab_page.node"/>
 	<item value="/Users/JustinKim/Documents" key="org.eclipse.jdt.ui.codeformatter.savepath"/>
+	<item value="0" key="CallHierarchyViewPart.call_mode"/>
 	<item value="29" key="org.eclipse.jdt.uiformatter_page.line_wrapping_tab_page.last_category_index"/>
 	<item value="/Users/JustinKim/Documents/workspace" key="org.eclipse.jdt.ui.codeformatter.loadpath"/>
 	<item value="163" key="org.eclipse.jdt.uiformatter_page.white_space.java_view.inner"/>
 	<item value="709" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.preferred_height"/>
 	<item value="filter_imports;" key="filters_last_used"/>
+	<item value="3" key="CallHierarchyViewPart.orientation"/>
 	<item value="8" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.last_focus"/>
 	<item value="3" key="TypeHierarchyViewPart.orientation"/>
 	<item value="true" key="org.eclipse.jdt.ui.formatter_page.show_invisible_characters"/>
 	<item value="1431" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_x"/>
 	<item value="false" key="TypeHierarchyViewPart.linkeditors"/>
 	<item value="-305" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_y"/>
+	<item value="2" key="CallHierarchyViewPart.field_mode"/>
+	<item value="1" key="SearchScopeActionGroup.search_scope_type"/>
 	<item value="893" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.preferred_width"/>
 	<item value="1037" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_width"/>
 	<item value="888" key="org.eclipse.jdt.uiformatter_pagemodify_dialog.preferred_height"/>
 	<item value="/Users/JustinKim/Documents/workspace/RANDOM/EXT ARCHIVE" key="org.eclipse.jdt.ui.lastextjar"/>
 	<item value="4" key="org.eclipse.jdt.uicleanup_pagemodify_dialog.last_focus"/>
+	<list key="SearchScopeActionGroup.working_set">
+	</list>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
 		<item value="false" key="renameSubpackages"/>
 		<item value="false" key="updateQualifiedNames"/>
@@ -48,6 +56,12 @@
 		<item value="false" key="expanded8"/>
 		<item value="false" key="expanded7"/>
 		<item value="false" key="expanded0"/>
+	</section>
+	<section name="SearchInDialog">
+		<item value="true" key="SearchInProjects"/>
+		<item value="true" key="SearchInAppLibs"/>
+		<item value="true" key="SearchInJRE"/>
+		<item value="true" key="SearchInSources"/>
 	</section>
 	<section name="org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart">
 		<item value="2" key="layout"/>
@@ -103,6 +117,8 @@
 	<section name="RefactoringWizard.preview">
 		<item value="600" key="width"/>
 		<item value="400" key="height"/>
+	</section>
+	<section name="CallHierarchySearchScope">
 	</section>
 	<section name="BreadcrumbItemDropDown">
 	</section>
