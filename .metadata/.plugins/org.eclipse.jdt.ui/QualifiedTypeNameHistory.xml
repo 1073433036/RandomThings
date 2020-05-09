@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="Python3Parser.Single_inputContext"/>
 <fullyQualifiedTypeName name="Python3Parser.With_itemContext"/>
 <fullyQualifiedTypeName name="Listener1"/>
 <fullyQualifiedTypeName name="Listener"/>
@@ -19,9 +18,6 @@
 <fullyQualifiedTypeName name="javax.sound.sampled.DataLine"/>
 <fullyQualifiedTypeName name="javax.sound.sampled.DataLine.Info"/>
 <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
-<fullyQualifiedTypeName name="java.io.BufferedReader"/>
-<fullyQualifiedTypeName name="java.util.StringTokenizer"/>
-<fullyQualifiedTypeName name="java.io.FileReader"/>
 <fullyQualifiedTypeName name="java.io.FileWriter"/>
 <fullyQualifiedTypeName name="java.io.PrintWriter"/>
 <fullyQualifiedTypeName name="java.io.BufferedWriter"/>
@@ -47,17 +43,21 @@
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="java.math.BigInteger"/>
 <fullyQualifiedTypeName name="java.util.TreeSet"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
 <fullyQualifiedTypeName name="java.lang.reflect.Array"/>
-<fullyQualifiedTypeName name="java.lang.Math"/>
 <fullyQualifiedTypeName name="java.util.HashSet"/>
-<fullyQualifiedTypeName name="java.util.Arrays"/>
-<fullyQualifiedTypeName name="java.util.Scanner"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="scam.shortestpathkremovals.state"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="scam.clustering"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="java.util.StringTokenizer"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.Scanner"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>
